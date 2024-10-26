@@ -1,7 +1,16 @@
+// {
+//   "compilerOptions": {
+//     "paths": {
+//       "@/*": ["./src/*"]
+//     }
+//   }
+// }
+
 {
   "compilerOptions": {
+    "baseUrl": ".", // or set to "." if you want to use the root as base
     "paths": {
-      "@/*": ["./src/*"]
+      "@/lib/*": ["lib/*"] // Maps "@/lib" to the "lib" directory
     }
   }
 }
