@@ -10,6 +10,11 @@
   margin-bottom: 1.5rem; /* my-6 */
 }
 
+
+.markdown h1 {
+  color: bisque;
+}
+
 .markdown h2 {
   font-size: 1.875rem; /* text-3xl */
   margin-top: 1rem; /* my-4 */
