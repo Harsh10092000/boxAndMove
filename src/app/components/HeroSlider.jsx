@@ -116,7 +116,7 @@ import Image from "next/image";
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
-export default function App({slides}) {
+export default function HeroSlider({slides}) {
   return (
     <>
     
@@ -135,7 +135,7 @@ export default function App({slides}) {
         className="mySwiper"
       >
         {slides.map((slide, index) => (
-        <SwiperSlide>
+        <SwiperSlide key={index}>
           {" "}
           <div>
             <Image

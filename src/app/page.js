@@ -2,8 +2,9 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import EmblaCarousel from "./components/EmblaCarousel";
+import HeroSlider from "./components/HeroSlider";
 import WhyChooseUsSlider from "./components/WhyChooseUsSlider";
+import ReviewsSlider from "./components/ReviewsSlider";
 export default function Home() {
   const slides1 = [
     {
@@ -20,62 +21,174 @@ export default function Home() {
     },
   ];
 
-  const slides = [
-    {
-      image: '/path/to/image1.jpg',
-      alt: 'Slide 1',
-      title: 'Title 1',
-      description: 'Description for slide 1',
-    },
-    {
-      image: '/path/to/image2.jpg',
-      alt: 'Slide 2',
-      title: 'Title 2',
-      description: 'Description for slide 2',
-    },
-   
-  ];
+
 
   const chooseusSlides = [
     {
       image: '/images/homepage-4/service/service-01.jpg',
-      heading2: 'Commercial Movers',
+      heading1: 'Commercial Movers',
       heading2: 'Residential Moves',
-      description: 'Description for slide 1',
+      description: 'Extreme attention to detail is the essence of Boo’s unique.'
     },
     {
-      image: '/images/homepage-4/service/service-01.jpg',
-      heading2: 'Commercial Movers1',
-      heading2: 'Residential Moves1',
-      description: 'Description for slide 1',
+      image: '/images/homepage-4/service/service-02.jpg',
+      heading1: 'Door to Door',
+      heading2: 'Condo & apartment moving',
+      description: 'Extreme attention to detail is the essence of Boo’s unique.'
     },
     {
-      image: '/images/homepage-4/service/service-01.jpg',
-      heading2: 'Commercial Movers2',
-      heading2: 'Residential Moves2',
-      description: 'Description for slide 1',
+      image: '/images/homepage-4/service/service-03.jpg',
+      heading1: 'International Moving',
+      heading2: 'Storage Service',
+      description: 'Extreme attention to detail is the essence of Boo’s unique.'
     },
     {
-      image: '/images/homepage-4/service/service-01.jpg',
-      heading2: 'Commercial Movers3',
-      heading2: 'Residential Moves3',
-      description: 'Description for slide 1',
+      image: '/images/homepage-4/service/service-04.jpg',
+      heading1: 'Local Moving',
+      heading2: 'Commercial & Office Movers',
+      description: 'Extreme attention to detail is the essence of Boo’s unique.'
     },
     {
-      image: '/images/homepage-4/service/service-01.jpg',
-      heading2: 'Commercial Movers4',
-      heading2: 'Residential Moves4',
-      description: 'Description for slide 1',
+      image: '/images/homepage-4/service/service-05.jpg',
+      heading1: 'Moving Locally',
+      heading2: 'Personalized packing services',
+      description: 'Extreme attention to detail is the essence of Boo’s unique.'
     },
-   
+    {
+      image: '/images/homepage-4/service/service-06.jpg',
+      heading1: 'Residential Moving',
+      heading2: 'Dismantling & Assembling',
+      description: 'Extreme attention to detail is the essence of Boo’s unique.'
+    },
+    {
+      image: '/images/homepage-4/service/service-07.jpg',
+      heading1: 'International Moving',
+      heading2: 'Storage Service',
+      description: 'Extreme attention to detail is the essence of Boo’s unique.'
+    },
+    {
+      image: '/images/homepage-4/service/service-08.jpg',
+      heading1: 'Commercial Movers',
+      heading2: 'Junk Removal Service',
+      description: 'Extreme attention to detail is the essence of Boo’s unique.'
+    },
+    {
+      image: '/images/homepage-4/service/service-09.jpg',
+      heading1: 'Moving Locally',
+      heading2: 'Long distance moving',
+      description: 'Extreme attention to detail is the essence of Boo’s unique.'
+    }
   ];
 
 
+  const reviewsCounter = [
+    {
+      icon: "pbmit-moversco-business-icon-headset-1",
+      count: 1784,
+      label: "Satisfied Clients We Have Served"
+    },
+    {
+      icon: "pbmit-moversco-business-icon-order",
+      count: 1348,
+      label: "Overall Boxed are moved at a time"
+    },
+    // Add more counters as needed
+  ];
+
+  const services = [
+    {
+      title: "Make your",
+      strongText: "reservation",
+      icon: "pbmit-moversco-business-icon-truck",
+      desc: "Explore the features",
+    },
+    {
+      title: "Load your",
+      strongText: "container",
+      icon: "pbmit-moversco-business-icon-delivery-truck",
+      desc: "Explore the features",
+    },
+    {
+      title: "We'll take it",
+      strongText: "from there",
+      icon: "pbmit-moversco-business-icon-house",
+      desc: "Explore the features",
+    },
+  ];
+  
+
+  const reviewsSlides = [
+    {
+      author: "Victoria Porter",
+      role: "Customer",
+      text: "Long established fact that a reader will be distracted by the readable content of a page when looking at it's layout. The point of using Lorem Ipsum.",
+      stars: 5,
+    },
+    {
+      author: "John Smith",
+      role: "Building Owner",
+      text: "Long established fact that a reader will be distracted by the readable content of a page when looking at it's layout. The point of using Lorem Ipsum.",
+      stars: 5,
+    },
+    {
+      author: "Allien John",
+      role: "Customer",
+      text: "Long established fact that a reader will be distracted by the readable content of a page when looking at it's layout. The point of using Lorem Ipsum.",
+      stars: 5,
+    },
+  ];
+  
+
+
+  const newsSlides = [
+    {
+      "id": 1,
+      "date": "08",
+      "month": "Aug",
+      "category": "International Moving",
+      "title": "Our Home Entertainment has Evolved Significantly",
+      "image": "/images/homepage-4/blog/blog-01.jpg",
+      "link": "blog-single-view.html"
+    },
+    {
+      "id": 2,
+      "date": "18",
+      "month": "Feb",
+      "category": "International Moving",
+      "title": "These Are The Voyages of The Starship Enterprise",
+      "image": "/images/homepage-4/blog/blog-02.jpg",
+      "link": "blog-single-view.html"
+    },
+    {
+      "id": 3,
+      "date": "21",
+      "month": "Jan",
+      "category": "Transports Takecare",
+      "title": "Three Reasons Visibility Matters in Supply Chain",
+      "image": "/images/homepage-4/blog/blog-03.jpg",
+      "link": "blog-single-view.html"
+    }
+  ]
+
+  const features = [
+    {
+      icon: "pbmit-moversco-business-icon-shield",
+      title: "Transparent Pricing"
+    },
+    {
+      icon: "pbmit-moversco-business-icon-logistics-delivery",
+      title: "Fast and efficient moving"
+    },
+    {
+      icon: "pbmit-moversco-business-icon-house",
+      title: "Warehouse storage"
+    }
+  ];
 
   return (
     <>
       <Header />
-      <div><EmblaCarousel slides={slides1} /></div>
+      <div><HeroSlider slides={slides1} /></div>
 
       <div className="pbmit-slider-area">
         {/* START Homeslider4 REVOLUTION SLIDER 6.5.15 */}
@@ -193,99 +306,41 @@ export default function Home() {
               </h2>
             </div>
             <div className="row">
-              <div className="col-md-6 col-lg-4">
-                <div className="pbminfotech-ihbox-style-7">
-                  <div className="pbminfotech-ihbox-inner">
-                    <div className="pbminfotech-ihbox-contents">
-                      <div className="pbminfotech-vc_general">
-                        <div className="pbminfotech-vc_cta3_content-container">
-                          <div className="pbminfotech-vc_cta3-content">
-                            <div className="pbminfotech-vc_cta3-content-header pbminfotech-wrap">
-                              <div className="pbminfotech-vc_cta3-headers pbminfotech-wrap-cell">
-                                <h2 className="pbminfotech-custom-heading">
-                                  Make your <strong>reservation</strong>
-                                </h2>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="pbminfotech-vc_btn3-container pbminfotech-vc_btn3-inline">
-                      <a className="pbminfotech-vc_general" href="#" title="">
-                        Explore the features
-                      </a>
-                    </div>
-                    <div className="pbminfotech-ihbox-icon pbminfotech-large-icon">
-                      <div className="pbminfotech-ihbox-icon-wrapper">
-                        <i className="pbmit-moversco-business-icon pbmit-moversco-business-icon-truck"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-6 col-lg-4">
-                <div className="pbminfotech-ihbox-style-7">
-                  <div className="pbminfotech-ihbox-inner">
-                    <div className="pbminfotech-ihbox-contents">
-                      <div className="pbminfotech-vc_general">
-                        <div className="pbminfotech-vc_cta3_content-container">
-                          <div className="pbminfotech-vc_cta3-content">
-                            <div className="pbminfotech-vc_cta3-content-header pbminfotech-wrap">
-                              <div className="pbminfotech-vc_cta3-headers pbminfotech-wrap-cell">
-                                <h2 className="pbminfotech-custom-heading">
-                                  Load your <strong>container</strong>
-                                </h2>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="pbminfotech-vc_btn3-container pbminfotech-vc_btn3-inline">
-                      <a className="pbminfotech-vc_general" href="#" title="">
-                        Explore the features
-                      </a>
-                    </div>
-                    <div className="pbminfotech-ihbox-icon pbminfotech-large-icon">
-                      <div className="pbminfotech-ihbox-icon-wrapper">
-                        <i className="pbmit-moversco-business-icon pbmit-moversco-business-icon-delivery-truck"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-6 col-lg-4">
-                <div className="pbminfotech-ihbox-style-7">
-                  <div className="pbminfotech-ihbox-inner">
-                    <div className="pbminfotech-ihbox-contents">
-                      <div className="pbminfotech-vc_general">
-                        <div className="pbminfotech-vc_cta3_content-container">
-                          <div className="pbminfotech-vc_cta3-content">
-                            <div className="pbminfotech-vc_cta3-content-header pbminfotech-wrap">
-                              <div className="pbminfotech-vc_cta3-headers pbminfotech-wrap-cell">
-                                <h2 className="pbminfotech-custom-heading">
-                                  We'll take it <strong>from there</strong>
-                                </h2>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="pbminfotech-vc_btn3-container pbminfotech-vc_btn3-inline">
-                      <a className="pbminfotech-vc_general" href="#" title="">
-                        Explore the features
-                      </a>
-                    </div>
-                    <div className="pbminfotech-ihbox-icon pbminfotech-large-icon">
-                      <div className="pbminfotech-ihbox-icon-wrapper">
-                        <i className="pbmit-moversco-business-icon pbmit-moversco-business-icon-house"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              {services.map((item) => (
+ <div className="col-md-6 col-lg-4">
+ <div className="pbminfotech-ihbox-style-7">
+   <div className="pbminfotech-ihbox-inner">
+     <div className="pbminfotech-ihbox-contents">
+       <div className="pbminfotech-vc_general">
+         <div className="pbminfotech-vc_cta3_content-container">
+           <div className="pbminfotech-vc_cta3-content">
+             <div className="pbminfotech-vc_cta3-content-header pbminfotech-wrap">
+               <div className="pbminfotech-vc_cta3-headers pbminfotech-wrap-cell">
+                 <h2 className="pbminfotech-custom-heading">
+                   {item.title} <strong>{item.strongText}</strong>
+                 </h2>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+     <div className="pbminfotech-vc_btn3-container pbminfotech-vc_btn3-inline">
+       <a className="pbminfotech-vc_general" href="#" title="">
+         {item.desc}
+       </a>
+     </div>
+     <div className="pbminfotech-ihbox-icon pbminfotech-large-icon">
+       <div className="pbminfotech-ihbox-icon-wrapper">
+         <i className={`{pbmit-moversco-business-icon ${item.icon}`}></i>
+       </div>
+     </div>
+   </div>
+ </div>
+</div>
+              ))}
+             
+             
             </div>
           </div>
         </section>
@@ -353,82 +408,26 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="col-md-6">
-                  <div className="appointment-four-ihbox">
-                    <div className="row">
-                      <div className="col-md-6 col-lg-4">
-                        <div className="pbminfotech-ihbox-style-9">
-                          <div className="pbminfotech-ihbox-inner">
-                            <div className="pbminfotech-ihbox-icon pbminfotech-large-icon pbminfotech-icon-skincolor">
-                              <div className="pbminfotech-ihbox-icon-wrapper">
-                                <i className="pbmit-moversco-business-icon pbmit-moversco-business-icon-shield"></i>
-                              </div>
-                            </div>
-                            <div className="pbminfotech-ihbox-contents">
-                              <div className="pbminfotech-vc_general pbminfotech-vc_cta3">
-                                <div className="pbminfotech-vc_cta3_content-container">
-                                  <div className="pbminfotech-vc_cta3-content">
-                                    <div className="pbminfotech-vc_cta3-content-header pbminfotech-wrap">
-                                      <div className="pbminfotech-vc_cta3-headers pbminfotech-wrap-cell">
-                                        <h2 className="pbminfotech-custom-heading ">
-                                          Transparent Pricing
-                                        </h2>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-md-6 col-lg-4">
-                        <div className="pbminfotech-ihbox-style-9">
-                          <div className="pbminfotech-ihbox-inner">
-                            <div className="pbminfotech-ihbox-icon pbminfotech-large-icon pbminfotech-icon-skincolor">
-                              <div className="pbminfotech-ihbox-icon-wrapper">
-                                <i className="pbmit-moversco-business-icon pbmit-moversco-business-icon-logistics-delivery"></i>
-                              </div>
-                            </div>
-                            <div className="pbminfotech-ihbox-contents">
-                              <div className="pbminfotech-vc_general pbminfotech-vc_cta3">
-                                <div className="pbminfotech-vc_cta3_content-container">
-                                  <div className="pbminfotech-vc_cta3-content">
-                                    <div className="pbminfotech-vc_cta3-content-header pbminfotech-wrap">
-                                      <div className="pbminfotech-vc_cta3-headers pbminfotech-wrap-cell">
-                                        <h2 className="pbminfotech-custom-heading ">
-                                          Fast and efficient moving
-                                        </h2>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-md-6 col-lg-4">
-                        <div className="pbminfotech-ihbox-style-9">
-                          <div className="pbminfotech-ihbox-inner">
-                            <div className="pbminfotech-ihbox-icon pbminfotech-large-icon pbminfotech-icon-skincolor">
-                              <div className="pbminfotech-ihbox-icon-wrapper">
-                                <i className="pbmit-moversco-business-icon pbmit-moversco-business-icon-house"></i>
-                              </div>
-                            </div>
-                            <div className="pbminfotech-ihbox-contents">
-                              <div className="pbminfotech-vc_general pbminfotech-vc_cta3">
-                                <div className="pbminfotech-vc_cta3_content-container">
-                                  <div className="pbminfotech-vc_cta3-content">
-                                    <div className="pbminfotech-vc_cta3-content-header pbminfotech-wrap">
-                                      <div className="pbminfotech-vc_cta3-headers pbminfotech-wrap-cell">
-                                        <h2 className="pbminfotech-custom-heading ">
-                                          Warehouse storage
-                                        </h2>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
+      <div className="appointment-four-ihbox">
+        <div className="row">
+          {features.map((feature, index) => (
+            <div className="col-md-6 col-lg-4" key={index}>
+              <div className="pbminfotech-ihbox-style-9">
+                <div className="pbminfotech-ihbox-inner">
+                  <div className="pbminfotech-ihbox-icon pbminfotech-large-icon pbminfotech-icon-skincolor">
+                    <div className="pbminfotech-ihbox-icon-wrapper">
+                      <i className={`pbmit-moversco-business-icon ${feature.icon}`}></i>
+                    </div>
+                  </div>
+                  <div className="pbminfotech-ihbox-contents">
+                    <div className="pbminfotech-vc_general pbminfotech-vc_cta3">
+                      <div className="pbminfotech-vc_cta3_content-container">
+                        <div className="pbminfotech-vc_cta3-content">
+                          <div className="pbminfotech-vc_cta3-content-header pbminfotech-wrap">
+                            <div className="pbminfotech-vc_cta3-headers pbminfotech-wrap-cell">
+                              <h2 className="pbminfotech-custom-heading">
+                                {feature.title}
+                              </h2>
                             </div>
                           </div>
                         </div>
@@ -436,6 +435,12 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
               </div>
             </div>
           </div>
@@ -627,13 +632,17 @@ export default function Home() {
                         </div>
                         <div className="col-md-4">
                           <div className="single-image-wrapper">
-                            <Image
+                            {/* <Image
                               src="/images/homepage-4/form-img.png"
                               width={100}
                               height={100}
                               className="img-fluid"
                               alt=""
-                            />
+                            /> */}
+                            <picture>
+  
+  <img src="/images/homepage-4/form-img.png" alt="" className="img-fluid" loading="lazy" />
+</picture>
                           </div>
                         </div>
                       </div>
@@ -644,24 +653,32 @@ export default function Home() {
                       <div className="row">
                         <div className="col-md-8">
                           <div className="single-map-image">
-                            <Image
+                            {/* <Image
                               src="/images/homepage-4/map-02.png"
                               width={100}
                               height={100}
                               className="img-fluid"
                               alt=""
-                            />
+                            /> */}
+                             <picture>
+  
+  <img src="/images/homepage-4/map-02.png" alt="" className="img-fluid" loading="lazy" />
+</picture>
                           </div>
                         </div>
                         <div className="col-md-4">
                           <div className="single-image-wrapper">
-                            <Image
+                            {/* <Image
                               src="/images/homepage-4/form-img.png"
                               width={100}
                               height={100}
                               className="img-fluid"
                               alt=""
-                            />
+                            /> */}
+ <picture>
+  
+  <img src="/images/homepage-4/form-img.png" alt="" className="img-fluid" loading="lazy" />
+</picture>
                           </div>
                         </div>
                       </div>
@@ -700,453 +717,7 @@ export default function Home() {
 
             <WhyChooseUsSlider slides={chooseusSlides} />
 
-            <div
-              className="swiper-slider"
-              data-loop="true"
-              data-autoplay="true"
-              data-dots="true"
-              data-arrows="false"
-              data-columns="3"
-              data-margin="30"
-              data-effect="slide"
-            >
-              <div className="swiper-wrapper">
-                <div className="swiper-slide">
-                  {/* Slide1 */}
-                  <article className="pbminfotech-servicebox-style-3">
-                    <div className="pbminfotech-post-item">
-                      <span className="pbminfotech-item-thumbnail">
-                        <span className="pbminfotech-item-thumbnail-inner">
-                          <Image
-                            src="/images/homepage-4/service/service-01.jpg"
-                            width={100}
-                            height={100}
-                            className="img-fluid"
-                            alt=""
-                          />
-                        </span>
-                      </span>
-                      <div className="pbmit-ihbox-icon">
-                        <i className="pbmit-moversco-business-icon pbmit-moversco-business-icon-shipping-and-delivery-1"></i>
-                      </div>
-                      <div className="pbminfotech-box-content">
-                        <div className="pbminfotech-box-content-inner">
-                          <div className="pbminfotech-box-category">
-                            <a href="#" rel="tag" tabIndex="0">
-                              Commercial Movers
-                            </a>
-                          </div>
-                          <div className="pbminfotech-pf-box-title">
-                            <h3>
-                              <a href="#" tabIndex="0">
-                                Residential Moves
-                              </a>
-                            </h3>
-                          </div>
-                          <div className="pbminfotech-service-content">
-                            <p>
-                              Extreme attention to detail is the essence of
-                              Boo’s unique.
-                            </p>
-                          </div>
-                          <div className="pbminfotech-box-link">
-                            <a href="#" tabIndex="0">
-                              READ MORE
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </article>
-
-                 
-                </div>
-                <div className="swiper-slide">
-                  {/* Slide2  */}
-                  <article className="pbminfotech-servicebox-style-3">
-                    <div className="pbminfotech-post-item">
-                      <span className="pbminfotech-item-thumbnail">
-                        <span className="pbminfotech-item-thumbnail-inner">
-                          <Image
-                            src="/images/homepage-4/service/service-02.jpg"
-                            width={100}
-                            height={100}
-                            className="img-fluid"
-                            alt=""
-                          />
-                        </span>
-                      </span>
-                      <div className="pbmit-ihbox-icon">
-                        <i className="pbmit-moversco-business-icon pbmit-moversco-business-icon-headset-1"></i>
-                      </div>
-                      <div className="pbminfotech-box-content">
-                        <div className="pbminfotech-box-content-inner">
-                          <div className="pbminfotech-box-category">
-                            <a href="#" rel="tag" tabIndex="0">
-                              Door to Door
-                            </a>
-                          </div>
-                          <div className="pbminfotech-pf-box-title">
-                            <h3>
-                              <a href="#" tabIndex="0">
-                                Condo & apartment moving{" "}
-                              </a>
-                            </h3>
-                          </div>
-                          <div className="pbminfotech-service-content">
-                            <p>
-                              Extreme attention to detail is the essence of
-                              Boo’s unique.
-                            </p>
-                          </div>
-                          <div className="pbminfotech-box-link">
-                            <a href="#" tabIndex="0">
-                              READ MORE
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </article>
-                </div>
-                <div className="swiper-slide">
-                  {/* Slide3 */}
-                  <article className="pbminfotech-servicebox-style-3">
-                    <div className="pbminfotech-post-item">
-                      <span className="pbminfotech-item-thumbnail">
-                        <span className="pbminfotech-item-thumbnail-inner">
-                          <Image
-                            src="/images/homepage-4/service/service-03.jpg"
-                            width={100}
-                            height={100}
-                            className="img-fluid"
-                            alt=""
-                          />
-                        </span>
-                      </span>
-                      <div className="pbmit-ihbox-icon">
-                        <i className="pbmit-moversco-business-icon pbmit-moversco-business-icon-house"></i>
-                      </div>
-                      <div className="pbminfotech-box-content">
-                        <div className="pbminfotech-box-content-inner">
-                          <div className="pbminfotech-box-category">
-                            <a href="#" rel="tag" tabIndex="0">
-                              International Moving
-                            </a>
-                          </div>
-                          <div className="pbminfotech-pf-box-title">
-                            <h3>
-                              <a href="#" tabIndex="0">
-                                Storage Service
-                              </a>
-                            </h3>
-                          </div>
-                          <div className="pbminfotech-service-content">
-                            <p>
-                              Extreme attention to detail is the essence of
-                              Boo’s unique.
-                            </p>
-                          </div>
-                          <div className="pbminfotech-box-link">
-                            <a href="#" tabIndex="0">
-                              READ MORE
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </article>
-                </div>
-                <div className="swiper-slide">
-                  {/* Slide4  */}
-                  <article className="pbminfotech-servicebox-style-3">
-                    <div className="pbminfotech-post-item">
-                      <span className="pbminfotech-item-thumbnail">
-                        <span className="pbminfotech-item-thumbnail-inner">
-                          <Image
-                            src="/images/homepage-4/service/service-04.jpg"
-                            width={100}
-                            height={100}
-                            className="img-fluid"
-                            alt=""
-                          />
-                        </span>
-                      </span>
-                      <div className="pbmit-ihbox-icon">
-                        <i className="pbmit-moversco-business-icon pbmit-moversco-business-icon-shipping-and-delivery"></i>
-                      </div>
-                      <div className="pbminfotech-box-content">
-                        <div className="pbminfotech-box-content-inner">
-                          <div className="pbminfotech-box-category">
-                            <a href="#" rel="tag" tabIndex="0">
-                              Local Moving
-                            </a>
-                          </div>
-                          <div className="pbminfotech-pf-box-title">
-                            <h3>
-                              <a href="#" tabIndex="0">
-                                Commercial & Office Movers
-                              </a>
-                            </h3>
-                          </div>
-                          <div className="pbminfotech-service-content">
-                            <p>
-                              Extreme attention to detail is the essence of
-                              Boo’s unique.
-                            </p>
-                          </div>
-                          <div className="pbminfotech-box-link">
-                            <a href="#" tabIndex="0">
-                              READ MORE
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </article>
-                </div>
-                <div className="swiper-slide">
-                  {/* Slide5  */}
-                  <article className="pbminfotech-servicebox-style-3">
-                    <div className="pbminfotech-post-item">
-                      <span className="pbminfotech-item-thumbnail">
-                        <span className="pbminfotech-item-thumbnail-inner">
-                          <Image
-                            src="/images/homepage-4/service/service-05.jpg"
-                            width={100}
-                            height={100}
-                            className="img-fluid"
-                            alt=""
-                          />
-                        </span>
-                      </span>
-                      <div className="pbmit-ihbox-icon">
-                        <i className="pbmit-moversco-business-icon pbmit-moversco-business-icon-like"></i>
-                      </div>
-                      <div className="pbminfotech-box-content">
-                        <div className="pbminfotech-box-content-inner">
-                          <div className="pbminfotech-box-category">
-                            <a href="#" rel="tag" tabIndex="0">
-                              Moving Locally
-                            </a>
-                          </div>
-                          <div className="pbminfotech-pf-box-title">
-                            <h3>
-                              <a href="#" tabIndex="0">
-                                Personalized packing services
-                              </a>
-                            </h3>
-                          </div>
-                          <div className="pbminfotech-service-content">
-                            <p>
-                              Extreme attention to detail is the essence of
-                              Boo’s unique.
-                            </p>
-                          </div>
-                          <div className="pbminfotech-box-link">
-                            <a href="#" tabIndex="0">
-                              READ MORE
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </article>
-                </div>
-                <div className="swiper-slide">
-                  {/* Slide6  */}
-                  <article className="pbminfotech-servicebox-style-3">
-                    <div className="pbminfotech-post-item">
-                      <span className="pbminfotech-item-thumbnail">
-                        <span className="pbminfotech-item-thumbnail-inner">
-                          <Image
-                            src="/images/homepage-4/service/service-06.jpg"
-                            width={100}
-                            height={100}
-                            className="img-fluid"
-                            alt=""
-                          />
-                        </span>
-                      </span>
-                      <div className="pbmit-ihbox-icon">
-                        <i className="pbmit-moversco-business-icon pbmit-moversco-business-icon-box"></i>
-                      </div>
-                      <div className="pbminfotech-box-content">
-                        <div className="pbminfotech-box-content-inner">
-                          <div className="pbminfotech-box-category">
-                            <a href="#" rel="tag" tabIndex="0">
-                              Residential Moving
-                            </a>
-                          </div>
-                          <div className="pbminfotech-pf-box-title">
-                            <h3>
-                              <a href="#" tabIndex="0">
-                                Dismantling &amp; Assembling
-                              </a>
-                            </h3>
-                          </div>
-                          <div className="pbminfotech-service-content">
-                            <p>
-                              Extreme attention to detail is the essence of
-                              Boo’s unique.
-                            </p>
-                          </div>
-                          <div className="pbminfotech-box-link">
-                            <a href="#" tabIndex="0">
-                              READ MORE
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </article>
-                </div>
-                <div className="swiper-slide">
-                  {/* Slide7  */}
-                  <article className="pbminfotech-servicebox-style-3">
-                    <div className="pbminfotech-post-item">
-                      <span className="pbminfotech-item-thumbnail">
-                        <span className="pbminfotech-item-thumbnail-inner">
-                          <Image
-                            src="/images/homepage-4/service/service-07.jpg"
-                            width={100}
-                            height={100}
-                            className="img-fluid"
-                            alt=""
-                          />
-                        </span>
-                      </span>
-                      <div className="pbmit-ihbox-icon">
-                        <i className="pbmit-moversco-business-icon pbmit-moversco-business-icon-truck"></i>
-                      </div>
-                      <div className="pbminfotech-box-content">
-                        <div className="pbminfotech-box-content-inner">
-                          <div className="pbminfotech-box-category">
-                            <a href="#" rel="tag" tabIndex="0">
-                              International Moving
-                            </a>
-                          </div>
-                          <div className="pbminfotech-pf-box-title">
-                            <h3>
-                              <a href="#" tabIndex="0">
-                                Storage Service
-                              </a>
-                            </h3>
-                          </div>
-                          <div className="pbminfotech-service-content">
-                            <p>
-                              Extreme attention to detail is the essence of
-                              Boo’s unique.
-                            </p>
-                          </div>
-                          <div className="pbminfotech-box-link">
-                            <a href="#" tabIndex="0">
-                              READ MORE
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </article>
-                </div>
-                <div className="swiper-slide">
-                  {/* Slide8  */}
-                  <article className="pbminfotech-servicebox-style-3">
-                    <div className="pbminfotech-post-item">
-                      <span className="pbminfotech-item-thumbnail">
-                        <span className="pbminfotech-item-thumbnail-inner">
-                          <Image
-                            src="/images/homepage-4/service/service-08.jpg"
-                            width={100}
-                            height={100}
-                            className="img-fluid"
-                            alt=""
-                          />
-                        </span>
-                      </span>
-                      <div className="pbmit-ihbox-icon">
-                        <i className="pbmit-moversco-business-icon pbmit-moversco-business-icon-world"></i>
-                      </div>
-                      <div className="pbminfotech-box-content">
-                        <div className="pbminfotech-box-content-inner">
-                          <div className="pbminfotech-box-category">
-                            <a href="#" rel="tag" tabIndex="0">
-                              Commercial Movers
-                            </a>
-                          </div>
-                          <div className="pbminfotech-pf-box-title">
-                            <h3>
-                              <a href="#" tabIndex="0">
-                                Junk Removal Service
-                              </a>
-                            </h3>
-                          </div>
-                          <div className="pbminfotech-service-content">
-                            <p>
-                              Extreme attention to detail is the essence of
-                              Boo’s unique.
-                            </p>
-                          </div>
-                          <div className="pbminfotech-box-link">
-                            <a href="#" tabIndex="0">
-                              READ MORE
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </article>
-                </div>
-                <div className="swiper-slide">
-                  {/* Slide9  */}
-                  <article className="pbminfotech-servicebox-style-3">
-                    <div className="pbminfotech-post-item">
-                      <span className="pbminfotech-item-thumbnail">
-                        <span className="pbminfotech-item-thumbnail-inner">
-                          <Image
-                            src="/images/homepage-4/service/service-09.jpg"
-                            width={100}
-                            height={100}
-                            className="img-fluid"
-                            alt=""
-                          />
-                        </span>
-                      </span>
-                      <div className="pbmit-ihbox-icon">
-                        <i className="pbmit-moversco-business-icon pbmit-moversco-business-icon-parcel"></i>
-                      </div>
-                      <div className="pbminfotech-box-content">
-                        <div className="pbminfotech-box-content-inner">
-                          <div className="pbminfotech-box-category">
-                            <a href="#" rel="tag" tabIndex="0">
-                              Moving Locally
-                            </a>
-                          </div>
-                          <div className="pbminfotech-pf-box-title">
-                            <h3>
-                              <a href="#" tabIndex="0">
-                                Long distance moving
-                              </a>
-                            </h3>
-                          </div>
-                          <div className="pbminfotech-service-content">
-                            <p>
-                              Extreme attention to detail is the essence of
-                              Boo’s unique.
-                            </p>
-                          </div>
-                          <div className="pbminfotech-box-link">
-                            <a href="#" tabIndex="0">
-                              READ MORE
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </article>
-                </div>
-              </div>
-            </div>
+            
           </div>
         </section>
         {/* Service End  */}
@@ -1169,70 +740,42 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="counter-four-box">
-                    <div className="row">
-                      <div className="col-md-5">
-                        <div className="pbminfotech-fidbox-style-4">
-                          <div className="pbminfotech-fld-contents">
-                            <div className="pbminfotech-ihbox-icon pbminfotech-large-icon pbminfotech-icon-skincolor">
-                              <div className="pbminfotech-sbox-icon-wrapper">
-                                <i className="pbmit-moversco-business-icon pbmit-moversco-business-icon-headset-1"></i>
-                              </div>
-                            </div>
-                            <div className="pbminfotech-fld-contents-wrap">
-                              <div className="pbminfotech-fid-inner">
-                                <span
-                                  data-appear-animation="animateDigits"
-                                  data-from="0"
-                                  data-to="1784"
-                                  data-interval="5"
-                                  className="numinate"
-                                >
-                                  1,784
-                                </span>
-                              </div>
-                              <h3 className="pbminfotech-fid-title">
-                                <span>
-                                  Satisfied Clients We Have Served
-                                  <br />
-                                </span>
-                              </h3>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-md-5">
-                        <div className="pbminfotech-fidbox-style-4">
-                          <div className="pbminfotech-fld-contents">
-                            <div className="pbminfotech-ihbox-icon pbminfotech-large-icon pbminfotech-icon-skincolor">
-                              <div className="pbminfotech-sbox-icon-wrapper">
-                                <i className="pbmit-moversco-business-icon pbmit-moversco-business-icon-order"></i>
-                              </div>
-                            </div>
-                            <div className="pbminfotech-fld-contents-wrap">
-                              <div className="pbminfotech-fid-inner">
-                                <span
-                                  data-appear-animation="animateDigits"
-                                  data-from="0"
-                                  data-to="1348"
-                                  data-interval="5"
-                                  className="numinate"
-                                >
-                                  1,348
-                                </span>
-                              </div>
-                              <h3 className="pbminfotech-fid-title">
-                                <span>
-                                  Overall Boxed are moved at a time
-                                  <br />
-                                </span>
-                              </h3>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-md-2"></div>
-                    </div>
+      <div className="row">
+        {reviewsCounter.map((counter, index) => (
+          <div className="col-md-5" key={index}>
+            <div className="pbminfotech-fidbox-style-4">
+              <div className="pbminfotech-fld-contents">
+                <div className="pbminfotech-ihbox-icon pbminfotech-large-icon pbminfotech-icon-skincolor">
+                  <div className="pbminfotech-sbox-icon-wrapper">
+                    <i className={`pbmit-moversco-business-icon ${counter.icon}`}></i>
                   </div>
+                </div>
+                <div className="pbminfotech-fld-contents-wrap">
+                  <div className="pbminfotech-fid-inner">
+                    <span
+                      data-appear-animation="animateDigits"
+                      data-from="0"
+                      data-to={counter.count}
+                      data-interval="5"
+                      className="numinate"
+                    >
+                      {counter.count.toLocaleString()}
+                    </span>
+                  </div>
+                  <h3 className="pbminfotech-fid-title">
+                    <span>
+                      {counter.label}
+                      <br />
+                    </span>
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+        <div className="col-md-2"></div>
+      </div>
+    </div>
                 </div>
               </div>
               <div className="col-lg-12 col-xl-6">
@@ -1254,121 +797,10 @@ export default function Home() {
                       </p>
                     </div>
                   </div>
-                  <div
-                    className="swiper-slider"
-                    data-loop="true"
-                    data-autoplay="false"
-                    data-dots="true"
-                    data-arrows="false"
-                    data-columns="2"
-                    data-margin="30"
-                    data-effect="slide"
-                  >
-                    <div className="swiper-wrapper">
-                      <div className="swiper-slide">
-                        {/* Slide1  */}
-                        <article className="pbminfotech-testimonialbox-style-5">
-                          <div className="pbminfotech-post-item">
-                            <div className="pbminfotech-box-content">
-                              <div className="pbminfotech-box-star">
-                                <i className="pbmit-base-icon-star pbmit-skincolor pbmit-active"></i>
-                                <i className="pbmit-base-icon-star pbmit-skincolor pbmit-active"></i>
-                                <i className="pbmit-base-icon-star pbmit-skincolor pbmit-active"></i>
-                                <i className="pbmit-base-icon-star pbmit-skincolor pbmit-active"></i>
-                                <i className="pbmit-base-icon-star pbmit-skincolor pbmit-active"></i>
-                              </div>
-                              <div className="pbminfotech-box-desc">
-                                <blockquote className="pbminfotech-testimonial-text">
-                                  Long established fact that a reader will be
-                                  distracted by the readable content of a page
-                                  when looking at it's layout. The point of
-                                  using Lorem Ipsum
-                                </blockquote>
-                              </div>
-                              <div className="pbminfotech-box-author">
-                                <div className="pbminfotech-box-title">
-                                  <h3 className="pbminfotech-author-name">
-                                    Victoria Porter
-                                  </h3>
-                                  <span className="pbminfotech-box-footer">
-                                    Customer
-                                  </span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </article>
-                      </div>
-                      <div className="swiper-slide">
-                        {/* Slide2  */}
-                        <article className="pbminfotech-testimonialbox-style-5">
-                          <div className="pbminfotech-post-item">
-                            <div className="pbminfotech-box-content">
-                              <div className="pbminfotech-box-star">
-                                <i className="pbmit-base-icon-star pbmit-skincolor pbmit-active"></i>
-                                <i className="pbmit-base-icon-star pbmit-skincolor pbmit-active"></i>
-                                <i className="pbmit-base-icon-star pbmit-skincolor pbmit-active"></i>
-                                <i className="pbmit-base-icon-star pbmit-skincolor pbmit-active"></i>
-                                <i className="pbmit-base-icon-star pbmit-skincolor pbmit-active"></i>
-                              </div>
-                              <div className="pbminfotech-box-desc">
-                                <blockquote className="pbminfotech-testimonial-text">
-                                  Long established fact that a reader will be
-                                  distracted by the readable content of a page
-                                  when looking at it's layout. The point of
-                                  using Lorem Ipsum
-                                </blockquote>
-                              </div>
-                              <div className="pbminfotech-box-author">
-                                <div className="pbminfotech-box-title">
-                                  <h3 className="pbminfotech-author-name">
-                                    John Smith
-                                  </h3>
-                                  <span className="pbminfotech-box-footer">
-                                    Building Owner{" "}
-                                  </span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </article>
-                      </div>
-                      <div className="swiper-slide">
-                        {/* Slide3  */}
-                        <article className="pbminfotech-testimonialbox-style-5">
-                          <div className="pbminfotech-post-item">
-                            <div className="pbminfotech-box-content">
-                              <div className="pbminfotech-box-star">
-                                <i className="pbmit-base-icon-star pbmit-skincolor pbmit-active"></i>
-                                <i className="pbmit-base-icon-star pbmit-skincolor pbmit-active"></i>
-                                <i className="pbmit-base-icon-star pbmit-skincolor pbmit-active"></i>
-                                <i className="pbmit-base-icon-star pbmit-skincolor pbmit-active"></i>
-                                <i className="pbmit-base-icon-star pbmit-skincolor pbmit-active"></i>
-                              </div>
-                              <div className="pbminfotech-box-desc">
-                                <blockquote className="pbminfotech-testimonial-text">
-                                  Long established fact that a reader will be
-                                  distracted by the readable content of a page
-                                  when looking at it's layout. The point of
-                                  using Lorem Ipsum
-                                </blockquote>
-                              </div>
-                              <div className="pbminfotech-box-author">
-                                <div className="pbminfotech-box-title">
-                                  <h3 className="pbminfotech-author-name">
-                                    Allien John
-                                  </h3>
-                                  <span className="pbminfotech-box-footer">
-                                    Customer
-                                  </span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </article>
-                      </div>
-                    </div>
-                  </div>
+
+<ReviewsSlider slides={reviewsSlides} />
+
+                  
                 </div>
               </div>
             </div>
@@ -1409,121 +841,41 @@ export default function Home() {
               </div>
             </div>
             <div className="row">
-              <div className="col-md-6 col-lg-4">
-                <article className="pbminfotech-box-blog pbminfotech-blogbox-style-4">
-                  <div className="post-item">
-                    <div className="pbminfotech-blog-image-with-meta">
-                      <div className="pbminfotech-featured-wrapper pbminfotech-post-featured-wrapper pbminfotech-post-format-">
-                        <Image
-                          src="/images/homepage-4/blog/blog-01.jpg"
-                          className="img-fluid"
-                          width={100}
-                          height={100}
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                    <div className="pbminfotech-meta-date-wrapper">
-                      <span className="pbminfotech-meta-date">08</span>
-                      <span className="pbminfotech-meta-month">Aug</span>
-                    </div>
-                    <div className="pbminfotech-box-content">
-                      <span className="pbmit-meta-line cat-links">
-                        <a href="blog-large-image.html">International Moving</a>
-                      </span>
-                      <div className="pbminfotech-box-title">
-                        <h4>
-                          <a href="blog-single-view.html">
-                            Our Home Entertainment has Evolved Significantly
-                          </a>
-                        </h4>
-                      </div>
-                      <div className="pbmit-blogbox-readmore">
-                        <div className="pbminfotech-blogbox-footer-left">
-                          <a href="blog-single-view.html">Read More</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </article>
+      {newsSlides.map(post => (
+        <div className="col-md-6 col-lg-4" key={post.id}>
+          <article className="pbminfotech-box-blog pbminfotech-blogbox-style-4">
+            <div className="post-item">
+              <div className="pbminfotech-blog-image-with-meta">
+                <div className="pbminfotech-featured-wrapper pbminfotech-post-featured-wrapper pbminfotech-post-format-">
+                  <picture>
+                    <img src={post.image} alt="" className="img-fluid" loading="lazy" />
+                  </picture>
+                </div>
               </div>
-              <div className="col-md-6 col-lg-4">
-                <article className="pbminfotech-box-blog pbminfotech-blogbox-style-4">
-                  <div className="post-item">
-                    <div className="pbminfotech-blog-image-with-meta">
-                      <div className="pbminfotech-featured-wrapper pbminfotech-post-featured-wrapper pbminfotech-post-format-">
-                        <Image
-                          src="/images/homepage-4/blog/blog-02.jpg"
-                          className="img-fluid"
-                          width={100}
-                          height={100}
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                    <div className="pbminfotech-meta-date-wrapper">
-                      <span className="pbminfotech-meta-date">18</span>
-                      <span className="pbminfotech-meta-month">Feb</span>
-                    </div>
-                    <div className="pbminfotech-box-content">
-                      <span className="pbmit-meta-line cat-links">
-                        <a href="blog-large-image.html">International Moving</a>
-                      </span>
-                      <div className="pbminfotech-box-title">
-                        <h4>
-                          <a href="blog-single-view.html">
-                            These Are The Voyages of The Starship Enterprise
-                          </a>
-                        </h4>
-                      </div>
-                      <div className="pbmit-blogbox-readmore">
-                        <div className="pbminfotech-blogbox-footer-left">
-                          <a href="blog-single-view.html">Read More</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </article>
+              <div className="pbminfotech-meta-date-wrapper">
+                <span className="pbminfotech-meta-date">{post.date}</span>
+                <span className="pbminfotech-meta-month">{post.month}</span>
               </div>
-              <div className="col-md-6 col-lg-4">
-                <article className="pbminfotech-box-blog pbminfotech-blogbox-style-4">
-                  <div className="post-item">
-                    <div className="pbminfotech-blog-image-with-meta">
-                      <div className="pbminfotech-featured-wrapper pbminfotech-post-featured-wrapper pbminfotech-post-format-">
-                        <Image
-                          src="/images/homepage-4/blog/blog-03.jpg"
-                          width={100}
-                          height={100}
-                          className="img-fluid"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                    <div className="pbminfotech-meta-date-wrapper">
-                      <span className="pbminfotech-meta-date">21</span>
-                      <span className="pbminfotech-meta-month">Jan</span>
-                    </div>
-                    <div className="pbminfotech-box-content">
-                      <span className="pbmit-meta-line cat-links">
-                        <a href="blog-large-image.html">Transports Takecare</a>
-                      </span>
-                      <div className="pbminfotech-box-title">
-                        <h4>
-                          <a href="blog-single-view.html">
-                            Three Reasons Visibility Matters in Supply Chain
-                          </a>
-                        </h4>
-                      </div>
-                      <div className="pbmit-blogbox-readmore">
-                        <div className="pbminfotech-blogbox-footer-left">
-                          <a href="blog-single-view.html">Read More</a>
-                        </div>
-                      </div>
-                    </div>
+              <div className="pbminfotech-box-content">
+                <span className="pbmit-meta-line cat-links">
+                  <a href={post.link}>{post.category}</a>
+                </span>
+                <div className="pbminfotech-box-title">
+                  <h4>
+                    <a href={post.link}>{post.title}</a>
+                  </h4>
+                </div>
+                <div className="pbmit-blogbox-readmore">
+                  <div className="pbminfotech-blogbox-footer-left">
+                    <a href={post.link}>Read More</a>
                   </div>
-                </article>
+                </div>
               </div>
             </div>
+          </article>
+        </div>
+      ))}
+    </div>
           </div>
         </section>
         {/* Blog End  */}

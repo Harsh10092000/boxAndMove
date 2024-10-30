@@ -12,7 +12,11 @@ const Footer = () => {
 							<div className="widget">
 								<div className="textwidget">
 									<p>
-										<Image className="pbmit-footerlogo" height={100} width={100}  src="/images/logo.png" alt="" />
+										{/* <Image className="pbmit-footerlogo" height={100} width={100}   src="/images/logo.png" alt="" /> */}
+										<picture>
+  
+  <img src="/images/logo.png" alt="" className="pbmit-footerlogo" loading="lazy" />
+</picture>
 									</p>
 									<p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.Duis aute irure dolor in reprehenderit in voluptate velit.</p>
 								</div>
@@ -104,7 +108,11 @@ const Footer = () => {
 		<div className="pbmit-icon-close"></div>
 		<div className="pbmit-search-outer">
 			<div className="pbmit-search-logo">
-				<Image src="/images/homepage-4/logo-white.png" width={100} height={100} alt="" />
+				{/* <Image src="/images/homepage-4/logo-white.png" width={100} height={100} alt="" /> */}
+				<picture>
+  
+  <img src="/images/homepage-4/logo-white.png" alt=""  loading="lazy" />
+</picture>
 			</div>
 			<form className="pbmit-site-searchform">
 				<input type="search" className="form-control field searchform-s" name="s" placeholder="Type Word Then Press Enter" />

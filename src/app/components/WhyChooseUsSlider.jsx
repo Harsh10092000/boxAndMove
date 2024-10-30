@@ -29,13 +29,17 @@ export default function WhyChooseUsSlider({slides}) {
                     <div className="pbminfotech-post-item">
                       <span className="pbminfotech-item-thumbnail">
                         <span className="pbminfotech-item-thumbnail-inner">
-                          <Image
+                          {/* <Image
                             src="/images/homepage-4/service/service-02.jpg"
                             width={100}
                             height={100}
                             className="img-fluid"
                             alt=""
-                          />
+                          /> */}
+                          <picture>
+  
+  <img src={slide.image} alt="" className="img-fluid" loading="lazy" />
+</picture>
                         </span>
                       </span>
                       <div className="pbmit-ihbox-icon">
@@ -45,20 +49,19 @@ export default function WhyChooseUsSlider({slides}) {
                         <div className="pbminfotech-box-content-inner">
                           <div className="pbminfotech-box-category">
                             <a href="#" rel="tag" tabIndex="0">
-                              Door to Door
+                              {slide.heading1}
                             </a>
                           </div>
                           <div className="pbminfotech-pf-box-title">
                             <h3>
                               <a href="#" tabIndex="0">
-                                Condo & apartment moving{" "}
+                                {slide.heading2}
                               </a>
                             </h3>
                           </div>
                           <div className="pbminfotech-service-content">
                             <p>
-                              Extreme attention to detail is the essence of
-                              Boo’s unique.
+                              {slide.description}
                             </p>
                           </div>
                           <div className="pbminfotech-box-link">
