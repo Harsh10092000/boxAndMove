@@ -116,17 +116,16 @@ import Image from "next/image";
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
-export default function HeroSlider({slides}) {
+export default function HeroSlider({ slides }) {
   return (
     <>
-    
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
-        autoplay={{
-          delay: 1000,
-          disableOnInteraction: false,
-        }}
+        // autoplay={{
+        //   delay: 10000,
+        //   disableOnInteraction: false,
+        // }}
         pagination={{
           clickable: true,
         }}
@@ -135,26 +134,39 @@ export default function HeroSlider({slides}) {
         className="mySwiper"
       >
         {slides.map((slide, index) => (
-        <SwiperSlide key={index}>
-          {" "}
-          <div>
-            <Image
+          <SwiperSlide key={index}>
+            <div className="hero-slider">
+              <div className="hero-slider-wrapper">
+                {/* <Image
              src={slide.image}
               alt=""
               title="slider-04-a"
               width={1920}
               height={700}
               className="rev-slidebg tp-rs-img rs-lazyload"
-            />
-            <div>
-            {slide.title}
+            />*/}
+                <div className="hero-heading">
+                  {/* {slide.title} */}
+                  Relocate with <br />
+                  <strong className="hero-heading-strong">
+                    Assurance and Power
+                  </strong>
+                </div>
+                <div>
+                  <p>{slide.description}</p>
+                  <br />
+
+                  <div>
+                    <ul>
+                      <li>Faster</li>
+                      <li>Faster</li>
+                      <li>Faster</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div>
-            <p>{slide.description}</p>
-              <br />
-            </div>
-          </div>
-        </SwiperSlide>
+          </SwiperSlide>
         ))}
         {/* <SwiperSlide>Slide 2</SwiperSlide>
         <SwiperSlide>Slide 3</SwiperSlide> */}
