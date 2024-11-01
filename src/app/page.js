@@ -12,12 +12,14 @@ export default function Home() {
       title: "Relocate with Assurance and Power",
       description:
         "Embrace a smooth and secure move, backed by dependable service and the strength to handle every challenge.",
+      iconTitle: "Faster",
     },
     {
       image: "/revolution/images/slider-04-b.jpg",
       title: "The smartest move you'll ever make.",
       description:
         "Choose a move that's efficient, reliable, and tailored to your needs for a seamless experience.",
+      iconTitle: "Faster" ,
     },
   ];
 

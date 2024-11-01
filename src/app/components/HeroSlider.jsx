@@ -157,10 +157,32 @@ export default function HeroSlider({ slides }) {
                   <br />
 
                   <div>
-                    <ul>
-                      <li>Faster</li>
-                      <li>Faster</li>
-                      <li>Faster</li>
+                    <ul className="d-flex">
+                      <li
+                        style={{
+                          zIndex: 12,
+                          backgroundColor: "#ffffff",
+                          fontFamily: "Biryani",
+                          textTransform: "uppercase",
+                        }}
+                      >
+                        <i class="pbmit-moversco-business-icon pbmit-moversco-business-icon-delivery-truck"></i>
+                        <br />
+                        <span> {slide.iconTitle}</span>
+                      </li>
+                     
+                      <li> <li
+                        style={{
+                          zIndex: 12,
+                          backgroundColor: "#ffffff",
+                          fontFamily: "Biryani",
+                          textTransform: "uppercase",
+                        }}
+                      >
+                        <i class="pbmit-moversco-business-icon pbmit-moversco-business-icon-delivery-truck"></i>
+                        <br />
+                        <span> Faster</span>
+                      </li></li>
                     </ul>
                   </div>
                 </div>
