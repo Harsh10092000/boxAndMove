@@ -36,7 +36,7 @@ const page = () => {
           <div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {post.map((item, index) => (
               <Link
-                href={`/${item.slug}`}
+                href={`/blog/${item.slug}`}
                 className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50"
                 key={index}
               >
