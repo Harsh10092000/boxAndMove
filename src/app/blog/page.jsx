@@ -1,5 +1,5 @@
-// import Footer from '@/components/footer/Footer'
-// import Header from '@/components/navbar/Navbar'
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 import { getAllPosts } from "@/lib/api";
 import Link from "next/link";
 
@@ -10,7 +10,7 @@ const page = () => {
   const morePost = post.slice(1);
   return (
     <div>
-      {/* <Header/> */}
+      <Header/>
       <section className="dark:bg-gray-100 dark:text-gray-800">
         <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
           {/* <Link
@@ -36,7 +36,7 @@ const page = () => {
           <div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {post.map((item, index) => (
               <Link
-                href={`/blog/${item.slug}`}
+                href={`/${item.slug}`}
                 className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50"
                 key={index}
               >
@@ -61,7 +61,7 @@ const page = () => {
           </div>
         </div>
       </section>
-      {/* <Footer/> */}
+      <Footer/>
     </div>
   );
 };

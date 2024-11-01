@@ -2,6 +2,8 @@
 import { getAllPosts, getPostBySlug } from "@/lib/api";
 import markdownToHtml from "@/lib/markdowntohtml";
 import React from "react";
+import Header from "src/app/components/Header";
+import Footer from "src/app/components/Footer";
 //import "./markdownstyling.css";
 import "./markdownstyling.css";
 //import { IconChevronDown } from "@tabler/icons-react";
@@ -31,7 +33,7 @@ const Page = async ({ params }) => {
   const faq = post.faq;
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <div class="max-w-screen-lg mx-auto">
         <main class="mt-10">
           <div class="mb-4 md:mb-0 w-full mx-auto relative">
@@ -107,7 +109,7 @@ const Page = async ({ params }) => {
           </div>
         </div>
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

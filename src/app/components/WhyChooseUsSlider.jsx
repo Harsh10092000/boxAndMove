@@ -25,8 +25,8 @@ export default function WhyChooseUsSlider({slides}) {
       >
         {slides.map((slide, index) => (
         <SwiperSlide key={index}>
-          <article className="pbminfotech-servicebox-style-3">
-                    <div className="pbminfotech-post-item">
+          <article className="pbminfotech-servicebox-style-3 ">
+                    <div className="pbminfotech-post-item margin-right-25">
                       <span className="pbminfotech-item-thumbnail">
                         <span className="pbminfotech-item-thumbnail-inner">
                           {/* <Image

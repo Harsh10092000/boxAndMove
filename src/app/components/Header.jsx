@@ -136,6 +136,7 @@ const Header = () => {
                                                         <Link href="/">Home</Link>
                                                     </li>
                                                     <li><Link href="/about">About us</Link></li>
+                                                    <li><Link href="/blog">Blog</Link></li>
                                                     <li className="dropdown">
                                                         <a href="#">Services</a>
                                                         <ul>
