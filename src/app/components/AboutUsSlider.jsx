@@ -5,7 +5,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import Link from 'next/link';
 const AboutUsSlider = ({slides}) => {
   return (
-    <div class="pbmit-col-stretched-right">
+    <div className="pbmit-col-stretched-right">
 				
 							
                         <Swiper
@@ -27,22 +27,22 @@ const AboutUsSlider = ({slides}) => {
 
         
 <SwiperSlide key={index}>
-							<article class="pbminfotech-servicebox-style-6">
-								<div class="pbminfotech-post-item">
-									<span class="pbminfotech-item-thumbnail">
-										<span class="pbminfotech-item-thumbnail-inner">
+							<article className="pbminfotech-servicebox-style-6">
+								<div className="pbminfotech-post-item">
+									<span className="pbminfotech-item-thumbnail">
+										<span className="pbminfotech-item-thumbnail-inner">
                                             <picture>
-											<img src={slide.image} class="img-fluid" alt="" />
+											<img src={slide.image} className="img-fluid" alt="" />
                                             </picture>
                                         </span>
 									</span>
-									<div class="pbminfotech-box-content">
-										<div class="pbminfotech-box-content-inner">
-											<div class="pbminfotech-pf-box-title">
+									<div className="pbminfotech-box-content">
+										<div className="pbminfotech-box-content-inner">
+											<div className="pbminfotech-pf-box-title">
 												<h3><Link href={slide.link} >{slide.title} </Link>
 												</h3>
 											</div>
-											<div class="pbminfotech-box-link">
+											<div className="pbminfotech-box-link">
 												<Link href={slide.link} >READ MORE</Link>
 											</div>
 										</div>

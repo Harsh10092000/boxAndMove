@@ -147,25 +147,25 @@ const About = () => {
     <>
       <Header />
       {/* Title Bar  */}
-      <div class="pbmit-title-bar-wrapper">
-        <div class="container">
-          <div class="pbmit-title-bar-content">
-            <div class="pbmit-title-bar-content-inner">
-              <div class="pbmit-tbar">
-                <div class="pbmit-tbar-inner container">
-                  <h1 class="pbmit-tbar-title">About Us</h1>
+      <div className="pbmit-title-bar-wrapper">
+        <div className="container">
+          <div className="pbmit-title-bar-content">
+            <div className="pbmit-title-bar-content-inner">
+              <div className="pbmit-tbar">
+                <div className="pbmit-tbar-inner container">
+                  <h1 className="pbmit-tbar-title">About Us</h1>
                 </div>
               </div>
-              <div class="pbmit-breadcrumb">
-                <div class="pbmit-breadcrumb-inner">
+              <div className="pbmit-breadcrumb">
+                <div className="pbmit-breadcrumb-inner">
                   <span>
-                    <Link title="" href="/" class="home">
+                    <Link title="" href="/" className="home">
                       <span>Home</span>
                     </Link>
                   </span>
-                  <span class="sep">-</span>
+                  <span className="sep">-</span>
                   <span>
-                    <span class="post-root post post-post current-item">
+                    <span className="post-root post post-post current-item">
                       About Us
                     </span>
                   </span>
@@ -178,26 +178,26 @@ const About = () => {
       {/* Title Bar End */}
 
       {/* Page Content  */}
-      <div class="page-content about-us_03">
+      <div className="page-content about-us_03">
         {/* About Start  */}
         <section>
-          <div class="container">
-            <div class="about-section">
-              <div class="row g-0">
-                <div class="col-md-12 col-xl-5">
+          <div className="container">
+            <div className="about-section">
+              <div className="row g-0">
+                <div className="col-md-12 col-xl-5">
                   <picture>
                     <img
                       src="images/about-us-03/about-us-01.jpg"
-                      class="img-fluid"
+                      className="img-fluid"
                       alt=""
                     />
                   </picture>
                 </div>
-                <div class="col-md-12 col-xl-7">
-                  <div class="about-right_box">
-                    <div class="pbmit-heading-subheading-style-4">
-                      <h4 class="pbmit-subtitle">About Us</h4>
-                      <h2 class="pbmit-title">Your Trusted Moving Partner</h2>
+                <div className="col-md-12 col-xl-7">
+                  <div className="about-right_box">
+                    <div className="pbmit-heading-subheading-style-4">
+                      <h4 className="pbmit-subtitle">About Us</h4>
+                      <h2 className="pbmit-title">Your Trusted Moving Partner</h2>
                     </div>
                     <p>
                       Welcome to BoxNMove, your trusted moving partner in
@@ -220,27 +220,27 @@ const About = () => {
         {/* About Start  */}
 
         {/* Inbox Start  */}
-        <section class="ihbox_section">
-          <div class="container">
-            <div class="row">
+        <section className="ihbox_section">
+          <div className="container">
+            <div className="row">
               {aboutUsServices.map((item) => (
-                <div class="col-md-6 col-xl-4">
-                  <div class="pbminfotech-ihbox-style-13">
-                    <div class="pbminfotech-ihbox-inner">
-                      <div class="pbminfotech-ihbox-icon pbminfotech-large-icon">
-                        <div class="pbminfotech-ihbox-icon-wrapper">
+                <div className="col-md-6 col-xl-4">
+                  <div className="pbminfotech-ihbox-style-13">
+                    <div className="pbminfotech-ihbox-inner">
+                      <div className="pbminfotech-ihbox-icon pbminfotech-large-icon">
+                        <div className="pbminfotech-ihbox-icon-wrapper">
                           <i
-                            class={`pbmit-moversco-business-icon ${item.icon}`}
+                            className={`pbmit-moversco-business-icon ${item.icon}`}
                           ></i>
                         </div>
                       </div>
-                      <div class="pbminfotech-ihbox-contents">
-                        <div class="pbminfotech-vc_general">
-                          <div class="pbminfotech-vc_cta3_content-container">
-                            <div class="pbminfotech-vc_cta3-content">
-                              <div class="pbminfotech-vc_cta3-content-header pbminfotech-wrap">
-                                <div class="pbminfotech-vc_cta3-headers pbminfotech-wrap-cell">
-                                  <h2 class="pbminfotech-custom-heading">
+                      <div className="pbminfotech-ihbox-contents">
+                        <div className="pbminfotech-vc_general">
+                          <div className="pbminfotech-vc_cta3_content-container">
+                            <div className="pbminfotech-vc_cta3-content">
+                              <div className="pbminfotech-vc_cta3-content-header pbminfotech-wrap">
+                                <div className="pbminfotech-vc_cta3-headers pbminfotech-wrap-cell">
+                                  <h2 className="pbminfotech-custom-heading">
                                     {item.title}
                                   </h2>
                                 </div>
@@ -248,7 +248,7 @@ const About = () => {
                             </div>
                           </div>
                         </div>
-                        <div class="pbminfotech-cta3-content-wrapper">
+                        <div className="pbminfotech-cta3-content-wrapper">
                           {item.description}
                         </div>
                       </div>
@@ -262,38 +262,38 @@ const About = () => {
         {/* Inbox End  */}
 
          {/* Service Start  */}
-	<section class="pbmit-bg-color-blackish service_seven">
-		<div class="container pbmit-col-stretched-yes pbmit-col-right">
-			<div class="pbmit-box-heading-wrapper">
-				<div class="pbmit-heading-subheading-style-4 text-white">
-					<h4 class="pbmit-subtitle">Our Services</h4>
-					<h2 class="pbmit-title">We give best services.</h2>
+	<section className="pbmit-bg-color-blackish service_seven">
+		<div className="container pbmit-col-stretched-yes pbmit-col-right">
+			<div className="pbmit-box-heading-wrapper">
+				<div className="pbmit-heading-subheading-style-4 text-white">
+					<h4 className="pbmit-subtitle">Our Services</h4>
+					<h2 className="pbmit-title">We give best services.</h2>
 				</div>
-				<div class="service-seven-arrow swiper-btn-custom d-flex flex-row-reverse"></div>
+				<div className="service-seven-arrow swiper-btn-custom d-flex flex-row-reverse"></div>
 			</div>
 			<AboutUsSlider slides={aboutUsSlider} />
 		</div>
 	</section>
 	
         {/* Service End  */}
-        <section class="our-company-section-three">
-          <div class="container">
-            <div class="pbmit-heading-subheading text-center">
-              <h4 class="pbmit-subtitle">Why Choose Us?</h4>
-              <h2 class="pbmit-title"> Your satisfaction is our priority.</h2>
+        <section className="our-company-section-three">
+          <div className="container">
+            <div className="pbmit-heading-subheading text-center">
+              <h4 className="pbmit-subtitle">Why Choose Us?</h4>
+              <h2 className="pbmit-title"> Your satisfaction is our priority.</h2>
             </div>
-            <div class="row g-0">
+            <div className="row g-0">
               {aboutUsChoose.map((item, index) => (
-                <div class="col-xl-3 col-md-6">
-                  <div class="pbminfotech-ihbox-style-5">
-                    <div class="pbminfotech-ihbox-inner">
-                      <div class="pbminfotech-ihbox-contents">
-                        <div class="pbminfotech-vc_general">
-                          <div class="pbminfotech-vc_cta3_content-container">
-                            <div class="pbminfotech-vc_cta3-content">
-                              <div class="pbminfotech-vc_cta3-content-header pbminfotech-wrap">
-                                <div class="pbminfotech-vc_cta3-headers pbminfotech-wrap-cell">
-                                  <h2 class="pbminfotech-custom-heading ">
+                <div className="col-xl-3 col-md-6">
+                  <div className="pbminfotech-ihbox-style-5">
+                    <div className="pbminfotech-ihbox-inner">
+                      <div className="pbminfotech-ihbox-contents">
+                        <div className="pbminfotech-vc_general">
+                          <div className="pbminfotech-vc_cta3_content-container">
+                            <div className="pbminfotech-vc_cta3-content">
+                              <div className="pbminfotech-vc_cta3-content-header pbminfotech-wrap">
+                                <div className="pbminfotech-vc_cta3-headers pbminfotech-wrap-cell">
+                                  <h2 className="pbminfotech-custom-heading ">
                                     {item.heading}
                                   </h2>
                                 </div>
@@ -301,15 +301,15 @@ const About = () => {
                             </div>
                           </div>
                         </div>
-                        <div class="pbminfotech-cta3-content-wrapper">
+                        <div className="pbminfotech-cta3-content-wrapper">
                           {item.description}
                         </div>
                       </div>
-                      <div class="pbminfotech-ihbox-icon pbminfotech-large-icon pbminfotech-icon-skincolor">
-                        <div class="pbminfotech-ihbox-icon-wrapper">
-                          <i class={`${item.icon}`}></i>
+                      <div className="pbminfotech-ihbox-icon pbminfotech-large-icon pbminfotech-icon-skincolor">
+                        <div className="pbminfotech-ihbox-icon-wrapper">
+                          <i className={`${item.icon}`}></i>
                         </div>
-                        <div class="pbminfotech-ihbox-big-number-text">01</div>
+                        <div className="pbminfotech-ihbox-big-number-text">01</div>
                       </div>
                     </div>
                   </div>
