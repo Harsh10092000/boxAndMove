@@ -2906,7 +2906,7 @@ textarea.form-control{
   
   .hero-slider {
     background-image: url(../revolution/images/slider-04-a.jpg);
-    height: 100vh;
+    height:75vh;
     background-repeat: no-repeat;
   }
 
@@ -2961,3 +2961,12 @@ textarea.form-control{
         line-height: 50px;
         font-weight: normal;
   }
+
+  ul.d-flex.banner-list li {
+    font-size: 16px;
+    text-align: center;
+    background-color: #fff;
+    padding: 10px 30px;
+    margin-right: 15px;
+    color: #000;
+}
