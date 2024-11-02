@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
+
 import "public/css/bootstrap.min.css"
  import "public/css/fontawesome.css"
  import "public/css/flaticon.css"
@@ -56,10 +57,10 @@ import "public/revolution/rs6.css"
 
 
 
-
-
 const Header = () => {
   return (
+    <>
+     
     <div className="page-wrapper">
 
          {/* Header Main Area  */}
@@ -195,6 +196,7 @@ const Header = () => {
             </div>
   </header>
   </div>
+  </>
   )
 
 }

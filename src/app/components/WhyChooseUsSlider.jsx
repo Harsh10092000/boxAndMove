@@ -12,7 +12,7 @@ export default function WhyChooseUsSlider({slides}) {
         // spaceBetween={30}
         // centeredSlides={true}
         autoplay={{
-          delay: 3000,
+          delay: 300000,
           disableOnInteraction: false,
         }}
         // pagination={{
