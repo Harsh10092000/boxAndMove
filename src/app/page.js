@@ -21,80 +21,86 @@ export default function Home() {
       title: "The smartest move you'll ever make.",
       description:
         "Choose a move that's efficient, reliable, and tailored to your needs for a seamless experience.",
-      iconTitle: "Faster" ,
+      iconTitle: "Faster",
     },
   ];
-
-
 
   const chooseusSlides = [
     {
-      image: '/images/homepage-4/service/service-01.jpg',
-      heading1: 'Commercial Movers',
-      heading2: 'Residential Moves',
-      description: 'Extreme attention to detail is the essence of Boo’s unique.'
+      image: "/images/homepage-4/service/service-01.jpg",
+      heading1: "Commercial Movers",
+      heading2: "Residential Moves",
+      description:
+        "Extreme attention to detail is the essence of Boo’s unique.",
     },
     {
-      image: '/images/homepage-4/service/service-02.jpg',
-      heading1: 'Door to Door',
-      heading2: 'Condo & apartment moving',
-      description: 'Extreme attention to detail is the essence of Boo’s unique.'
+      image: "/images/homepage-4/service/service-02.jpg",
+      heading1: "Door to Door",
+      heading2: "Condo & apartment moving",
+      description:
+        "Extreme attention to detail is the essence of Boo’s unique.",
     },
     {
-      image: '/images/homepage-4/service/service-03.jpg',
-      heading1: 'International Moving',
-      heading2: 'Storage Service',
-      description: 'Extreme attention to detail is the essence of Boo’s unique.'
+      image: "/images/homepage-4/service/service-03.jpg",
+      heading1: "International Moving",
+      heading2: "Storage Service",
+      description:
+        "Extreme attention to detail is the essence of Boo’s unique.",
     },
     {
-      image: '/images/homepage-4/service/service-04.jpg',
-      heading1: 'Local Moving',
-      heading2: 'Commercial & Office Movers',
-      description: 'Extreme attention to detail is the essence of Boo’s unique.'
+      image: "/images/homepage-4/service/service-04.jpg",
+      heading1: "Local Moving",
+      heading2: "Commercial & Office Movers",
+      description:
+        "Extreme attention to detail is the essence of Boo’s unique.",
     },
     {
-      image: '/images/homepage-4/service/service-05.jpg',
-      heading1: 'Moving Locally',
-      heading2: 'Personalized packing services',
-      description: 'Extreme attention to detail is the essence of Boo’s unique.'
+      image: "/images/homepage-4/service/service-05.jpg",
+      heading1: "Moving Locally",
+      heading2: "Personalized packing services",
+      description:
+        "Extreme attention to detail is the essence of Boo’s unique.",
     },
     {
-      image: '/images/homepage-4/service/service-06.jpg',
-      heading1: 'Residential Moving',
-      heading2: 'Dismantling & Assembling',
-      description: 'Extreme attention to detail is the essence of Boo’s unique.'
+      image: "/images/homepage-4/service/service-06.jpg",
+      heading1: "Residential Moving",
+      heading2: "Dismantling & Assembling",
+      description:
+        "Extreme attention to detail is the essence of Boo’s unique.",
     },
     {
-      image: '/images/homepage-4/service/service-07.jpg',
-      heading1: 'International Moving',
-      heading2: 'Storage Service',
-      description: 'Extreme attention to detail is the essence of Boo’s unique.'
+      image: "/images/homepage-4/service/service-07.jpg",
+      heading1: "International Moving",
+      heading2: "Storage Service",
+      description:
+        "Extreme attention to detail is the essence of Boo’s unique.",
     },
     {
-      image: '/images/homepage-4/service/service-08.jpg',
-      heading1: 'Commercial Movers',
-      heading2: 'Junk Removal Service',
-      description: 'Extreme attention to detail is the essence of Boo’s unique.'
+      image: "/images/homepage-4/service/service-08.jpg",
+      heading1: "Commercial Movers",
+      heading2: "Junk Removal Service",
+      description:
+        "Extreme attention to detail is the essence of Boo’s unique.",
     },
     {
-      image: '/images/homepage-4/service/service-09.jpg',
-      heading1: 'Moving Locally',
-      heading2: 'Long distance moving',
-      description: 'Extreme attention to detail is the essence of Boo’s unique.'
-    }
+      image: "/images/homepage-4/service/service-09.jpg",
+      heading1: "Moving Locally",
+      heading2: "Long distance moving",
+      description:
+        "Extreme attention to detail is the essence of Boo’s unique.",
+    },
   ];
-
 
   const reviewsCounter = [
     {
       icon: "pbmit-moversco-business-icon-headset-1",
       count: 1784,
-      label: "Satisfied Clients We Have Served"
+      label: "Satisfied Clients We Have Served",
     },
     {
       icon: "pbmit-moversco-business-icon-order",
       count: 1348,
-      label: "Overall Boxed are moved at a time"
+      label: "Overall Boxed are moved at a time",
     },
     // Add more counters as needed
   ];
@@ -119,7 +125,6 @@ export default function Home() {
       desc: "Explore the features",
     },
   ];
-  
 
   const reviewsSlides = [
     {
@@ -141,61 +146,61 @@ export default function Home() {
       stars: 5,
     },
   ];
-  
-
 
   const newsSlides = [
     {
-      "id": 1,
-      "date": "08",
-      "month": "Aug",
-      "category": "International Moving",
-      "title": "Our Home Entertainment has Evolved Significantly",
-      "image": "/images/homepage-4/blog/blog-01.jpg",
-      "link": "blog-single-view.html"
+      id: 1,
+      date: "08",
+      month: "Aug",
+      category: "International Moving",
+      title: "Our Home Entertainment has Evolved Significantly",
+      image: "/images/homepage-4/blog/blog-01.jpg",
+      link: "blog-single-view.html",
     },
     {
-      "id": 2,
-      "date": "18",
-      "month": "Feb",
-      "category": "International Moving",
-      "title": "These Are The Voyages of The Starship Enterprise",
-      "image": "/images/homepage-4/blog/blog-02.jpg",
-      "link": "blog-single-view.html"
+      id: 2,
+      date: "18",
+      month: "Feb",
+      category: "International Moving",
+      title: "These Are The Voyages of The Starship Enterprise",
+      image: "/images/homepage-4/blog/blog-02.jpg",
+      link: "blog-single-view.html",
     },
     {
-      "id": 3,
-      "date": "21",
-      "month": "Jan",
-      "category": "Transports Takecare",
-      "title": "Three Reasons Visibility Matters in Supply Chain",
-      "image": "/images/homepage-4/blog/blog-03.jpg",
-      "link": "blog-single-view.html"
-    }
-  ]
+      id: 3,
+      date: "21",
+      month: "Jan",
+      category: "Transports Takecare",
+      title: "Three Reasons Visibility Matters in Supply Chain",
+      image: "/images/homepage-4/blog/blog-03.jpg",
+      link: "blog-single-view.html",
+    },
+  ];
 
   const features = [
     {
       icon: "pbmit-moversco-business-icon-shield",
-      title: "Transparent Pricing"
+      title: "Transparent Pricing",
     },
     {
       icon: "pbmit-moversco-business-icon-logistics-delivery",
-      title: "Fast and efficient moving"
+      title: "Fast and efficient moving",
     },
     {
       icon: "pbmit-moversco-business-icon-house",
-      title: "Warehouse storage"
-    }
+      title: "Warehouse storage",
+    },
   ];
 
   return (
     <>
- 
       <Header />
-      <div><HeroSlider slides={slides1} /></div>
+      <div>
+        <HeroSlider slides={slides1} />
+      </div>
 
-    
+   
+
       <div className="page-content demo-four">
         {/* About Start  */}
         <section className="about-section-four">
@@ -208,40 +213,41 @@ export default function Home() {
             </div>
             <div className="row">
               {services.map((item) => (
- <div className="col-md-6 col-lg-4">
- <div className="pbminfotech-ihbox-style-7">
-   <div className="pbminfotech-ihbox-inner">
-     <div className="pbminfotech-ihbox-contents">
-       <div className="pbminfotech-vc_general">
-         <div className="pbminfotech-vc_cta3_content-container">
-           <div className="pbminfotech-vc_cta3-content">
-             <div className="pbminfotech-vc_cta3-content-header pbminfotech-wrap">
-               <div className="pbminfotech-vc_cta3-headers pbminfotech-wrap-cell">
-                 <h2 className="pbminfotech-custom-heading">
-                   {item.title} <strong>{item.strongText}</strong>
-                 </h2>
-               </div>
-             </div>
-           </div>
-         </div>
-       </div>
-     </div>
-     <div className="pbminfotech-vc_btn3-container pbminfotech-vc_btn3-inline">
-       <a className="pbminfotech-vc_general" href="#" title="">
-         {item.desc}
-       </a>
-     </div>
-     <div className="pbminfotech-ihbox-icon pbminfotech-large-icon">
-       <div className="pbminfotech-ihbox-icon-wrapper">
-         <i className={`{pbmit-moversco-business-icon ${item.icon}`}></i>
-       </div>
-     </div>
-   </div>
- </div>
-</div>
+                <div className="col-md-6 col-lg-4">
+                  <div className="pbminfotech-ihbox-style-7">
+                    <div className="pbminfotech-ihbox-inner">
+                      <div className="pbminfotech-ihbox-contents">
+                        <div className="pbminfotech-vc_general">
+                          <div className="pbminfotech-vc_cta3_content-container">
+                            <div className="pbminfotech-vc_cta3-content">
+                              <div className="pbminfotech-vc_cta3-content-header pbminfotech-wrap">
+                                <div className="pbminfotech-vc_cta3-headers pbminfotech-wrap-cell">
+                                  <h2 className="pbminfotech-custom-heading">
+                                    {item.title}{" "}
+                                    <strong>{item.strongText}</strong>
+                                  </h2>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="pbminfotech-vc_btn3-container pbminfotech-vc_btn3-inline">
+                        <a className="pbminfotech-vc_general" href="#" title="">
+                          {item.desc}
+                        </a>
+                      </div>
+                      <div className="pbminfotech-ihbox-icon pbminfotech-large-icon">
+                        <div className="pbminfotech-ihbox-icon-wrapper">
+                          <i
+                            className={`{pbmit-moversco-business-icon ${item.icon}`}
+                          ></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               ))}
-             
-             
             </div>
           </div>
         </section>
@@ -295,7 +301,7 @@ export default function Home() {
         {/* Progressbar End  */}
 
         {/* Appointment Start  */}
-      <AppointmentForm />
+        <AppointmentForm />
         {/* Appointment End */}
 
         {/* Service Start */}
@@ -323,8 +329,6 @@ export default function Home() {
             </div>
 
             <WhyChooseUsSlider slides={chooseusSlides} />
-
-            
           </div>
         </section>
         {/* Service End  */}
@@ -347,42 +351,44 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="counter-four-box">
-      <div className="row">
-        {reviewsCounter.map((counter, index) => (
-          <div className="col-md-5" key={index}>
-            <div className="pbminfotech-fidbox-style-4">
-              <div className="pbminfotech-fld-contents">
-                <div className="pbminfotech-ihbox-icon pbminfotech-large-icon pbminfotech-icon-skincolor">
-                  <div className="pbminfotech-sbox-icon-wrapper">
-                    <i className={`pbmit-moversco-business-icon ${counter.icon}`}></i>
+                    <div className="row">
+                      {reviewsCounter.map((counter, index) => (
+                        <div className="col-md-5" key={index}>
+                          <div className="pbminfotech-fidbox-style-4">
+                            <div className="pbminfotech-fld-contents">
+                              <div className="pbminfotech-ihbox-icon pbminfotech-large-icon pbminfotech-icon-skincolor">
+                                <div className="pbminfotech-sbox-icon-wrapper">
+                                  <i
+                                    className={`pbmit-moversco-business-icon ${counter.icon}`}
+                                  ></i>
+                                </div>
+                              </div>
+                              <div className="pbminfotech-fld-contents-wrap">
+                                <div className="pbminfotech-fid-inner">
+                                  <span
+                                    data-appear-animation="animateDigits"
+                                    data-from="0"
+                                    data-to={counter.count}
+                                    data-interval="5"
+                                    className="numinate"
+                                  >
+                                    {counter.count.toLocaleString()}
+                                  </span>
+                                </div>
+                                <h3 className="pbminfotech-fid-title">
+                                  <span>
+                                    {counter.label}
+                                    <br />
+                                  </span>
+                                </h3>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                      <div className="col-md-2"></div>
+                    </div>
                   </div>
-                </div>
-                <div className="pbminfotech-fld-contents-wrap">
-                  <div className="pbminfotech-fid-inner">
-                    <span
-                      data-appear-animation="animateDigits"
-                      data-from="0"
-                      data-to={counter.count}
-                      data-interval="5"
-                      className="numinate"
-                    >
-                      {counter.count.toLocaleString()}
-                    </span>
-                  </div>
-                  <h3 className="pbminfotech-fid-title">
-                    <span>
-                      {counter.label}
-                      <br />
-                    </span>
-                  </h3>
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
-        <div className="col-md-2"></div>
-      </div>
-    </div>
                 </div>
               </div>
               <div className="col-lg-12 col-xl-6">
@@ -405,9 +411,7 @@ export default function Home() {
                     </div>
                   </div>
 
-<ReviewsSlider slides={reviewsSlides} />
-
-                  
+                  <ReviewsSlider slides={reviewsSlides} />
                 </div>
               </div>
             </div>
@@ -448,41 +452,50 @@ export default function Home() {
               </div>
             </div>
             <div className="row">
-      {newsSlides.map(post => (
-        <div className="col-md-6 col-lg-4" key={post.id}>
-          <article className="pbminfotech-box-blog pbminfotech-blogbox-style-4">
-            <div className="post-item">
-              <div className="pbminfotech-blog-image-with-meta">
-                <div className="pbminfotech-featured-wrapper pbminfotech-post-featured-wrapper pbminfotech-post-format-">
-                  <picture>
-                    <img src={post.image} alt="" className="img-fluid" loading="lazy" />
-                  </picture>
+              {newsSlides.map((post) => (
+                <div className="col-md-6 col-lg-4" key={post.id}>
+                  <article className="pbminfotech-box-blog pbminfotech-blogbox-style-4">
+                    <div className="post-item">
+                      <div className="pbminfotech-blog-image-with-meta">
+                        <div className="pbminfotech-featured-wrapper pbminfotech-post-featured-wrapper pbminfotech-post-format-">
+                          <picture>
+                            <img
+                              src={post.image}
+                              alt=""
+                              className="img-fluid"
+                              loading="lazy"
+                            />
+                          </picture>
+                        </div>
+                      </div>
+                      <div className="pbminfotech-meta-date-wrapper">
+                        <span className="pbminfotech-meta-date">
+                          {post.date}
+                        </span>
+                        <span className="pbminfotech-meta-month">
+                          {post.month}
+                        </span>
+                      </div>
+                      <div className="pbminfotech-box-content">
+                        <span className="pbmit-meta-line cat-links">
+                          <a href={post.link}>{post.category}</a>
+                        </span>
+                        <div className="pbminfotech-box-title">
+                          <h4>
+                            <a href={post.link}>{post.title}</a>
+                          </h4>
+                        </div>
+                        <div className="pbmit-blogbox-readmore">
+                          <div className="pbminfotech-blogbox-footer-left">
+                            <a href={post.link}>Read More</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
                 </div>
-              </div>
-              <div className="pbminfotech-meta-date-wrapper">
-                <span className="pbminfotech-meta-date">{post.date}</span>
-                <span className="pbminfotech-meta-month">{post.month}</span>
-              </div>
-              <div className="pbminfotech-box-content">
-                <span className="pbmit-meta-line cat-links">
-                  <a href={post.link}>{post.category}</a>
-                </span>
-                <div className="pbminfotech-box-title">
-                  <h4>
-                    <a href={post.link}>{post.title}</a>
-                  </h4>
-                </div>
-                <div className="pbmit-blogbox-readmore">
-                  <div className="pbminfotech-blogbox-footer-left">
-                    <a href={post.link}>Read More</a>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
-          </article>
-        </div>
-      ))}
-    </div>
           </div>
         </section>
         {/* Blog End  */}

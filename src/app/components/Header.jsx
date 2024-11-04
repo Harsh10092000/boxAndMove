@@ -1,4 +1,5 @@
-import React from 'react'
+"use client"
+import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -58,6 +59,7 @@ import "public/revolution/rs6.css"
 
 
 const Header = () => {
+    const [showNav, setShowNav] = useState(false);
   return (
     <>
      
@@ -121,12 +123,13 @@ const Header = () => {
                                 <div className="site-navigations">
                                     <nav className="main-menu navbar-expand-xl navbar-light">
                                         <div className="navbar-header">
-                                             {/* Toggle Button  */}
-                                            <button className="navbar-toggler" type="button">
+                                             {/* Toggle Button  */} 
+                                            <button onClick={() => setShowNav(true)} className="navbar-toggler" type="button">
                                                 <i className="pbmit-moversco-icon-bars"></i>
                                             </button>
                                         </div>
-                                        <div className="pbmit-mobile-menu-bg"></div>
+
+                                       
                                         <div className="collapse navbar-collapse clearfix show" id="pbmit-menu">
                                             <div className="pbmit-menu-wrap">
                                                 <span className="closepanel">
@@ -182,6 +185,9 @@ const Header = () => {
                                             </div>
                                         </div>
                                     </nav>
+
+
+
                                     <div className="pbmit-header-info">
 
                                         <div className="pbmit-header-button">
@@ -195,6 +201,63 @@ const Header = () => {
                 </div>
             </div>
   </header>
+
+{showNav &&
+  <div>
+    
+                                                <span onClick={() => setShowNav(false)} className="closepanel">
+                                                    <i className="pbmit-base-icon-close"></i>
+                                                </span>
+                                                <ul className="navigation clearfix">
+                                                    <li className="active">
+                                                        <Link href="/">Home</Link>
+                                                    </li>
+                                                    <li><Link href="/about">About us</Link></li>
+                                                    <li><Link href="/blog">Blog</Link></li>
+                                                    <li className="dropdown">
+                                                        <a href="#">Services</a>
+                                                        <ul>
+                                                            <li><a href="residentialMoving.php">Residential Moving</a></li>
+                                                            <li><a href="CondoApartmentMoving.php">Condo & apartment moving </a></li>
+                                                            <li><a href="CommercialOfficeMoving.php">Commercial & Office Movers</a></li>
+                                                            <li><a href="PersonalizedPackingServices.php">Personalized packing services</a></li>
+                                                            <li><a href="DismantlingAssembling.php"> Dismantling & Assembling</a></li>
+                                                            <li><a href="StorageService.php">Storage Service</a></li>
+                                                            <li><a href="JunkRemovalService.php">Junk Removal Service</a></li>
+                                                            <li><a href="LongDistanceMoving.php">Long distance moving</a></li>
+                                                        </ul>
+                                                    </li>
+
+                                                    <li >
+                                                        <a href="areas-we-serve.php">Areas We Serve </a>
+                                                         {/* <ul>
+																<li><a href="#">Brampton</a></li>
+																<li><a href="#">Mississauga</a></li>
+																<li><a href="#">Hamilton</a></li>
+																<li><a href="#">Milton</a></li>
+																<li><a href="#">Oakville</a></li>
+
+																<li><a href="#">Burlington</a></li>
+																<li><a href="#">Halton hills</a></li>
+																<li><a href="#">Georgetown
+																	</a></li>
+																<li><a href="#">Vaughan</a></li>
+																<li><a href="#">Toronto</a></li>
+																<li><a href="#">Brampton</a></li>
+																<li><a href="#">Markham</a></li>
+																<li><a href="#">New market </a></li>
+																<li><a href="#">Ajay</a></li>
+																<li><a href="#">Whitby</a></li>
+																<li><a href="#">Oshawa </a></li>
+																<li><a href="#">Etobicoke</a></li>
+																<li><a href="#">North york</a></li>
+															</ul>  */}
+                                                    </li>
+                                                    <li><a href="contact-us.php">Contact Us</a></li>
+                                                </ul>
+                                            
+  </div>
+}
   </div>
   </>
   )
