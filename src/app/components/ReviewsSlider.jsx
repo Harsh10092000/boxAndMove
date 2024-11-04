@@ -15,13 +15,22 @@ const ReviewsSlider = ({slides}) => {
         delay: 3000,
         disableOnInteraction: false,
       }}
+      breakpoints={{
+        640: {
+          slidesPerView: 2,
+          
+        },
+        
+       
+      }}
+      loop={true}
       pagination={{
         clickable: true,
       }}
       //navigation={true}
        modules={[Autoplay, Pagination, Navigation]}
       className="mySwiper"
-      watchSlidesProgress={true} slidesPerView={2} 
+      watchSlidesProgress={true} slidesPerView={1} 
     >
       {slides.map((slide, index) => (
       <SwiperSlide key={index}>

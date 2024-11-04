@@ -181,42 +181,49 @@ const About = () => {
       <div className="page-content about-us_03">
         {/* About Start  */}
         <section>
-          <div className="container">
-            <div className="about-section">
-              <div className="row g-0">
-                <div className="col-md-12 col-xl-5">
-                  <picture>
-                    <img
-                      src="images/about-us-03/about-us-01.jpg"
-                      className="img-fluid"
-                      alt=""
-                    />
-                  </picture>
-                </div>
-                <div className="col-md-12 col-xl-7">
-                  <div className="about-right_box">
-                    <div className="pbmit-heading-subheading-style-4">
-                      <h4 className="pbmit-subtitle">About Us</h4>
-                      <h2 className="pbmit-title">Your Trusted Moving Partner</h2>
-                    </div>
-                    <p>
-                      Welcome to BoxNMove, your trusted moving partner in
-                      Canada! With a passion for delivering exceptional moving
-                      experiences, we are dedicated to making your relocation
-                      process smooth, efficient, and stress-free.
-                    </p>
-                    {avoutUsPoints.map((item, index) => (
-                      <>
-                        <h4>{item.title}</h4>
-                        <p> {item.description}</p>
-                      </>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+		<div className="container">
+			<div className="about-section">
+				<div className="row ">
+					<div className="col-md-6">
+            <picture>
+						<img src="images/about-us-03/about-us-01.jpg" className="img-fluid" alt="" />
+            </picture>
+					</div>
+					<div className="col-md-6">
+						<div className="about-right_box">
+							<div className="pbmit-heading-subheading-style-4">
+								<h4 className="pbmit-subtitle">Your Trusted Moving Partner</h4>
+								<h2 className="pbmit-title">About Us</h2>
+							</div>
+							<p>Welcome to BoxNMove, your trusted moving partner in Canada! With a passion for delivering exceptional moving experiences, we are dedicated to making your relocation process smooth, efficient, and stress-free.</p>
+							<h4>Who We Are</h4>
+							<p> At BoxNMove, we understand that moving can be a daunting task, filled with numerous challenges and uncertainties. That's why we have built a team of highly skilled professionals who are committed to providing top-notch moving services tailored to meet your specific needs. Whether you're moving across town or across the country, our expertise ensures that your belongings are handled with care and precision.</p>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+  <section className="mission-vission">
+		<div className="container">
+			<div className="row">
+				<div className="col-md-6">
+					<div className="card p-5">
+						<h2>Our Mission</h2>
+						<p>Our mission is to provide reliable, efficient, and stress-free moving services to our customers, ensuring their belongings are safely transported.</p>
+					</div>
+				</div>
+				<div className="col-md-6">
+					<div className="card p-5">
+						<h2>Our Vision</h2>
+						<p>Our vision is to be the leading moving services provider in Canada, known for our excellence, reliability, and customer-centric approach.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
         {/* About Start  */}
 
         {/* Inbox Start  */}
@@ -284,36 +291,35 @@ const About = () => {
             </div>
             <div className="row g-0">
               {aboutUsChoose.map((item, index) => (
-                <div className="col-xl-3 col-md-6">
-                  <div className="pbminfotech-ihbox-style-5">
-                    <div className="pbminfotech-ihbox-inner">
-                      <div className="pbminfotech-ihbox-contents">
-                        <div className="pbminfotech-vc_general">
-                          <div className="pbminfotech-vc_cta3_content-container">
-                            <div className="pbminfotech-vc_cta3-content">
-                              <div className="pbminfotech-vc_cta3-content-header pbminfotech-wrap">
-                                <div className="pbminfotech-vc_cta3-headers pbminfotech-wrap-cell">
-                                  <h2 className="pbminfotech-custom-heading ">
-                                    {item.heading}
-                                  </h2>
-                                </div>
+               
+
+                <div className=" col-md-6">
+                <div className="pbminfotech-ihbox-style-5">
+                  <div className="pbminfotech-ihbox-inner">
+                    <div className="pbminfotech-ihbox-contents">
+                      <div className="pbminfotech-vc_general">
+                        <div className="pbminfotech-vc_cta3_content-container">
+                          <div className="pbminfotech-vc_cta3-content">
+                            <div className="pbminfotech-vc_cta3-content-header pbminfotech-wrap">
+                              <div className="pbminfotech-vc_cta3-headers pbminfotech-wrap-cell">
+                                <h2 className="pbminfotech-custom-heading "> {item.heading}
+                                </h2>
                               </div>
                             </div>
                           </div>
                         </div>
-                        <div className="pbminfotech-cta3-content-wrapper">
-                          {item.description}
-                        </div>
                       </div>
-                      <div className="pbminfotech-ihbox-icon pbminfotech-large-icon pbminfotech-icon-skincolor">
-                        <div className="pbminfotech-ihbox-icon-wrapper">
-                          <i className={`${item.icon}`}></i>
-                        </div>
-                        <div className="pbminfotech-ihbox-big-number-text">01</div>
+                      <div className="pbminfotech-cta3-content-wrapper">{item.description}</div>
+                    </div>
+                    <div className="pbminfotech-ihbox-icon pbminfotech-large-icon pbminfotech-icon-skincolor">
+                      <div className="pbminfotech-ihbox-icon-wrapper">
+                      <i className={`${item.icon}`}></i>
                       </div>
+                      <div className="pbminfotech-ihbox-big-number-text">01</div>
                     </div>
                   </div>
                 </div>
+              </div>
               ))}
             </div>
           </div>

@@ -15,13 +15,29 @@ const AboutUsSlider = ({slides}) => {
           delay: 10000,
           disableOnInteraction: false,
         }}
+        loop={true}
+        breakpoints={{
+          640: {
+            slidesPerView: 2,
+            
+          },
+          
+          768: {
+            slidesPerView: 3,
+            
+          },
+          1024: {
+            slidesPerView: 4,
+            
+          },
+        }}
         // pagination={{
         //   clickable: true,
         // }}
         // navigation={true}
          modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
-        watchSlidesProgress={true} slidesPerView={4} 
+        watchSlidesProgress={true} slidesPerView={1} 
       >
         {slides.map((slide, index) => (
 
