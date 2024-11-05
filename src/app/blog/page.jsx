@@ -27,7 +27,7 @@ const page = () => {
             <div className="pbmit-title-bar-content-inner">
               <div className="pbmit-tbar">
                 <div className="pbmit-tbar-inner container">
-                  <h1 className="pbmit-tbar-title">Blog Grid View</h1>
+                  <h1 className="pbmit-tbar-title">Blog</h1>
                 </div>
               </div>
               <div className="pbmit-breadcrumb">
@@ -40,7 +40,7 @@ const page = () => {
                   <span className="sep">-</span>
                   <span>
                     <span className="post-root post post-post current-item">
-                      Blog Grid View
+                      Blog
                     </span>
                   </span>
                 </div>

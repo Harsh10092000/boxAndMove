@@ -275,7 +275,7 @@ export default function Home() {
                     around-the-clock, every day of the week, we help you have a
                     less stressful Moving Day. You will have professionals at
                     your side from beginning to end if you choose us. It's
-                    Possible to Move Without Stress. Make a call Call +1 (226)
+                    Possible to Move Without Stress. Make a Call +1 (226)
                     899-2461 right now to receive a free relocation quote.
                   </p>
 

@@ -114,9 +114,9 @@ const Header = () => {
                                 <div className="pbmit-header-wrapper">
                                     <div className="site-branding">
                                         <span className="site-title">
-                                            <a href="/">
+                                            <Link href="/">
                                                 <Image className="logo-img" src="/images/logo.png" width={100} height={100} alt="" />
-                                            </a>
+                                            </Link>
                                         </span>
                                     </div>
                                 </div>
