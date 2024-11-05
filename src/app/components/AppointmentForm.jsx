@@ -85,7 +85,7 @@ const AppointmentForm = () => {
                       <span>Request a quote</span>
                     </a>
                   </li>
-                  <li onClick={() => setCurrentTab(2)} className="nav-item" role="presentation">
+                  <li onClick={() => setCurrentTab(2)} className="nav-item  mob-hide" role="presentation">
                     <a
                       className={`nav-link ${currentTab === 2 ? "active" : ""}`}
                       data-bs-toggle="tab"

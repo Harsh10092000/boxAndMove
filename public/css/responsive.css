@@ -2287,6 +2287,14 @@ span.closepanel {
 	border: 1px solid #f50404;
 }
 
+.pbmit-tab-style-1 .nav-item a i{
+	font-size:2em;
+}
+.pbmit-tab-style-1 .nav-item a span {  
+	font-size:16px;
+	
+}
+
 }
 
 @media(max-width:575px) {
@@ -2556,6 +2564,15 @@ span.closepanel {
 	.site-header .sticky-header .site-branding img {
         max-height: 65px;
     }
+	
+		.hero-heading {
+			line-height: 40px;
+			font-size: 30px;
+		}
+		.hero-slider {
+			height: 53vh;
+		}
+	
 }
 
 @media (max-width:320px) {

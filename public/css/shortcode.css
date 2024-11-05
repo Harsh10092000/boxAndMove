@@ -4548,6 +4548,9 @@ section.top-services-slide {
     color: var(--pbmit-heading-color) !important;
     background-color: var(--pbmit-white-color);
     transition: background .2s ease-in-out,color .2s ease-in-out;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
 }
 .pbmit-tab-style-1 .nav-item a i{
 	font-size: 3em;
@@ -4559,9 +4562,11 @@ section.top-services-slide {
     display: inline-block;
     line-height: 0px;
     text-align: center;
-	font-size: 17px;
+	font-size: 20px;
 	font-family: var(--pbmit-heading-typography-font-family);
 }
+
+
 .pbmit-tab-style-1 .tab-content {
     margin: 0;
     padding: 50px 50px 0 50px;
