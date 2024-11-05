@@ -7,10 +7,50 @@ import React from "react";
 
 const page = () => {
   const post = getAllPosts();
+
+  console.log("post.category : " , post.category);
+  
+  
+  // export function getPostsByCategory(category) {
+  //   const allPosts = getAllPosts();
+  //   return allPosts.filter((post) => post.category === category);
+  // }
+
   const morePost = post.slice(1);
   return (
     <div>
       <Header/>
+      {/* Title Bar */}
+      <div className="pbmit-title-bar-wrapper">
+        <div className="container">
+          <div className="pbmit-title-bar-content">
+            <div className="pbmit-title-bar-content-inner">
+              <div className="pbmit-tbar">
+                <div className="pbmit-tbar-inner container">
+                  <h1 className="pbmit-tbar-title">Blog Grid View</h1>
+                </div>
+              </div>
+              <div className="pbmit-breadcrumb">
+                <div className="pbmit-breadcrumb-inner">
+                  <span>
+                    <a title="" href="#" className="home">
+                      <span>MoversCO</span>
+                    </a>
+                  </span>
+                  <span className="sep">-</span>
+                  <span>
+                    <span className="post-root post post-post current-item">
+                      Blog Grid View
+                    </span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     {/* Title Bar End  */}
+
       <section className="dark:bg-gray-100 dark:text-gray-800">
         <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
           {/* <Link
@@ -33,7 +73,7 @@ const page = () => {
               <p> {post[0].description}</p>
             </div>
           </Link> */}
-          <div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {/* <div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {post.map((item, index) => (
               <Link
                 href={`/blog/${item.slug}`}
@@ -58,9 +98,49 @@ const page = () => {
                 </div>
               </Link>
             ))}
-          </div>
+          </div> */}
         </div>
       </section>
+
+      <div className="page-content">   
+
+<section className="blog-grid section-md">
+    <div className="container">
+        <div className="row">
+
+        {post.map((item, index) => (
+            <div className="col-md-6 col-lg-4">
+             
+                <article className="pbminfotech-blogbox-style-3 pbminfotech-box-blog">
+                    <div className="post-item">
+                        <div className="pbminfotech-blog-image-with-meta">
+                            <div className="pbminfotech-featured-wrapper pbminfotech-post-featured-wrapper pbminfotech-post-format-">
+                              <Link href={`/blog/${item.slug}`}>  <picture><img src="images/blog/blog-01-new.jpg" className="img-fluid" alt=""/></picture></Link>
+                            </div>
+                            <div className="pbminfotech-meta-date">{new Date(item.date).toDateString()}</div>
+                        </div>
+                        <div className="pbminfotech-box-content">
+                            <div className="pbminfotech-box-title">
+                                <h4><Link href={`/blog/${item.slug}`}>{item.title}</Link></h4>
+                            </div>
+                            <div className="pbmit-blogbox-readmore">
+                                <div className="pbminfotech-blogbox-footer-left">
+                                    <Link  href={`/blog/${item.slug}`}>Read More</Link>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+               
+            </div>
+           ))}
+        </div>
+    </div>
+</section>
+
+
+</div>
+
       <Footer/>
     </div>
   );

@@ -1,9 +1,10 @@
 ---
-title: "100 Reasons Why Homework Is Bad | Genuine Reasons To Ditch Homework!"
+title: "Top 83+ Insightful Consumer Behaviour Research Topics for Students"
 description: " Is homework pointless? We think so! Discover 100 Reasons Why Homework Is Bad in our blog post. Learn how it stresses kids & stifles creativity. Find alternatives!"
 
 date: "2024-05-08"
 author: Amar
+category: "residentail moving 111111"
 ---
 
 
