@@ -2263,11 +2263,28 @@ body {
 		text-align: center;
 	}
 	.hero-slider {	
-		height: 53vh;	
+		height:65vh;	
 }
 ul.d-flex.banner-list li { 
     padding: 10px 20px;
     margin-right: 10px;    
+}
+ul.navigation {   
+    border: 1px solid #f4f4f4;
+    margin: 10px;
+}
+ul.navigation li {
+    line-height: 44px;
+    border-bottom: 1px solid #f4f4f4;
+    padding: 0 10px;
+}
+span.closepanel {
+    position: absolute;
+    top: 110px;
+    right: 10px;
+    color: #fff ;
+    background-color: #f50404;
+	border: 1px solid #f50404;
 }
 
 }
