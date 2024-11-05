@@ -1,6 +1,6 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { getAllPosts } from "@/lib/api";
+import { getAllPosts , getCategoryList } from "@/lib/api";
 import Link from "next/link";
 
 import React from "react";
@@ -8,7 +8,8 @@ import React from "react";
 const page = () => {
   const post = getAllPosts();
 
-  console.log("post.category : " , post.category);
+  const postList = getCategoryList();
+  console.log("postList : " , postList);
   
   
   // export function getPostsByCategory(category) {

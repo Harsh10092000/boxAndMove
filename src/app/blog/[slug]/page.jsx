@@ -125,18 +125,22 @@
 
 
 
-import { getAllPosts, getPostBySlug } from "@/lib/api";
+import { getAllPosts, getPostBySlug, getCategoryList, getRecentPosts } from "@/lib/api";
 import markdownToHtml from "@/lib/markdowntohtml";
 import React from "react";
 import Header from "src/app/components/Header";
 import Footer from "src/app/components/Footer";
-//import "./markdownstyling.css";
 import "./markdownstyling.css";
-//import { IconChevronDown } from "@tabler/icons-react";
+import Link from "next/link";
+import moment from "moment";
+
+
+const dateFormatter = (date) => {
+  return moment(date).format("MMMM D, YYYY");
+}
 
 export function generateMetadata({ params }) {
   const post = getPostBySlug(params.slug);
-
   if (!post) {
     return notFound();
   }
@@ -154,6 +158,10 @@ export function generateMetadata({ params }) {
 
 const Page = async ({ params }) => {
   const post = getPostBySlug(params.slug);
+
+  const categoryList = getCategoryList();
+  const recentPosts =  getRecentPosts(params.slug);
+
 
   const content = await markdownToHtml(post.content || "");
   const faq = post.faq;
@@ -223,7 +231,7 @@ const Page = async ({ params }) => {
                                                 <span>By </span>
                                                 <a href="blog-large-image.html" title="Posted by admin" rel="author">{post.author}</a>
                                             </span>
-                                            <span class="pbmit-meta pbmit-meta-comments">{post.date}</span>
+                                            <span class="pbmit-meta pbmit-meta-comments">{dateFormatter(post.date)}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -286,51 +294,34 @@ const Page = async ({ params }) => {
                     <aside class="widget widget-categories">
                         <h3 class="widget-title">Categories</h3>
                         <ul>
-                            <li><a href="blog-large-image.html">Household Moving</a><span>2</span></li>
+                          {categoryList.map((item, index) => (
+                             <li key={index}><a href="blog-large-image.html">{item}</a>
+                             {/* <span>2</span> */}
+                             </li>
+                          ))}
+
+                            {/* <li><a href="blog-large-image.html">Household Moving</a><span>2</span></li>
                             <li><a href="blog-large-image.html">International Moving</a><span>4</span></li>
                             <li><a href="blog-large-image.html">Relocation Moving</a><span>2</span></li>
-                            <li><a href="blog-large-image.html">Transports Takecare</a><span>2</span></li>
+                            <li><a href="blog-large-image.html">Transports Takecare</a><span>2</span></li> */}
                         </ul>
                     </aside>
                     <aside class="widget widget-recent-post">
                         <h2 class="widget-title">Recent posts</h2>
                         <ul class="recent-post-list">
-                            <li class="recent-post-list-li"> 
-                                <a class="recent-post-thum" href="#">
+                          {recentPosts.map((item, index) => (
+                            <li key={index} class="recent-post-list-li"> 
+                                <Link class="recent-post-thum" href={item.slug}>
                                 <img src="../images/homepage-1/recent-post/blog-01.jpg" class="img-fluid" alt=""/>
-                                </a>
+                                </Link>
                                 <div class="media-body">
-                                <a href="blog-single-view.html">Our Home Entertainment has Evolved Significantly</a>
-                                <span class="post-date">August 8, 2018</span>
+                                <Link href={item.slug}>{item.title}</Link>
+                                <span class="post-date">{dateFormatter(post.date)}</span>
                                 </div> 
                             </li>
-                            <li class="recent-post-list-li"> 
-                                <a class="recent-post-thum" href="#">
-                                <img src="../images/homepage-1/recent-post/blog-02.jpg" class="img-fluid" alt=""/>
-                                </a>
-                                <div class="media-body">
-                                <a href="blog-single-view.html">These Are The Voyages of The Starship Enterprise</a>
-                                <span class="post-date">February 18, 2018</span>
-                                </div> 
-                            </li>
-                            <li class="recent-post-list-li"> 
-                                <a class="recent-post-thum" href="#">
-                                <img src="../images/homepage-1/recent-post/blog-03.jpg" class="img-fluid" alt=""/>
-                                </a>
-                                <div class="media-body">
-                                <a href="blog-single-view.html">Three Reasons Visibility Matters in Supply Chain</a>
-                                <span class="post-date">January 21, 2018</span>
-                                </div> 
-                            </li>
-                            <li class="recent-post-list-li"> 
-                                <a class="recent-post-thum" href="#">
-                                <img src="../images/homepage-1/recent-post/blog-04.jpg" class="img-fluid" alt=""/>
-                                </a>
-                                <div class="media-body">
-                                <a href="blog-single-view.html">Its Mission Explore Strange to the New Worlds</a>
-                                <span class="post-date">September 29, 2017</span>
-                                </div> 
-                            </li>
+                          ))}
+                            
+                         
                         </ul>
                     </aside>
                     <aside class="widget widget-tag-cloud">
