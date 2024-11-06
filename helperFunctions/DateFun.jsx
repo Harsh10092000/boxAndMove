@@ -9,3 +9,8 @@ export const GetDay = ({date}) => {
 export const GetMonth = ({date}) => {
     return moment(date).format('MMM');
   }
+
+
+  export  const DateFormatter = ({date}) => {
+    return moment(date).format("MMMM D, YYYY");
+  }

@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import { GetDay, GetMonth } from 'helperFunctions/DateFun'
 const BlogCard = ({item}) => {
   return (
     <div className="col-md-6 col-lg-4">
@@ -11,7 +12,8 @@ const BlogCard = ({item}) => {
                               <Link href={`/blog/${item.slug}`}>  <picture><img src={item.coverImage} className="img-fluid" alt=""/></picture></Link>
                             </div>
                             {/* <div className="pbminfotech-meta-date">{new Date(item.date).toDateString()}</div> */}
-                            <div className="pbminfotech-meta-date"><span>Aug</span>08</div>
+                            <div className="pbminfotech-meta-date"><span>{GetMonth({ date: item.date })}</span>{GetDay({ date: item.date })}</div>
+                     
                         </div>
 
 

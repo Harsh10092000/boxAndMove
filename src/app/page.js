@@ -477,12 +477,12 @@ export default function Home() {
                       <div className="pbminfotech-meta-date-wrapper">
                         <span className="pbminfotech-meta-date">
                           {/* {moment(post.month).format('DD')}    */}
-                          {GetDay(post.date)}
+                          {GetDay({ date: post.date })}
                         </span>
                         <span className="pbminfotech-meta-month">
                           
                           {/* {moment(post.month).format('MMM')}     */}
-                          {GetMonth(post.date)}
+                          {GetMonth({ date: post.date })}
                         </span>
                       </div>
                       <div className="pbminfotech-box-content">

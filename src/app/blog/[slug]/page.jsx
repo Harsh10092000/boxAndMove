@@ -133,11 +133,10 @@ import Footer from "src/app/components/Footer";
 import "./markdownstyling.css";
 import Link from "next/link";
 import moment from "moment";
+import { DateFormatter, GetDay, GetMonth } from "helperFunctions/DateFun";
 
 
-const dateFormatter = (date) => {
-  return moment(date).format("MMMM D, YYYY");
-}
+
 
 export function generateMetadata({ params }) {
   const post = getPostBySlug(params.slug);
@@ -215,8 +214,8 @@ const Page = async ({ params }) => {
                                 <div className="pbmit-blog-classic-inner">
                                     <div className="pbmit-blog-meta-wrapper">
                                         <div className="pbmit-meta pbmit-meta-cat">
-                                            <div className="pbmit-blog-classic-dbox-date">18</div>
-                                            <div className="pbmit-blog-classic-dbox-month">Feb</div>
+                                            <div className="pbmit-blog-classic-dbox-date">{GetDay({ date: post.date })}</div>
+                                            <div className="pbmit-blog-classic-dbox-month">{GetMonth({ date: post.date })}</div>
                                         </div>
                                         <h3 className="pbmit-post-title">
                                             <a href="blog-single-view.html">{post.title}</a> 
@@ -231,7 +230,7 @@ const Page = async ({ params }) => {
                                                 <span>By {post.author}</span>
                                                
                                             </span>
-                                            <span className="pbmit-meta pbmit-meta-comments">{dateFormatter(post.date)}</span>
+                                            <span className="pbmit-meta pbmit-meta-comments">{DateFormatter({date: post.date})}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -316,7 +315,7 @@ const Page = async ({ params }) => {
                                 </Link>
                                 <div className="media-body">
                                 <Link href={item.slug}>{item.title}</Link>
-                                <span className="post-date">{dateFormatter(post.date)}</span>
+                                <span className="post-date">{DateFormatter({date: post.date})}</span>
                                 </div> 
                             </li>
                           ))}
