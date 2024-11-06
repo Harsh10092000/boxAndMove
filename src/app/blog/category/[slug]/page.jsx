@@ -1,24 +1,23 @@
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import { getAllPosts , getCategoryList } from "@/lib/api";
+import Header from "src/app/components/Header";
+import Footer from "src/app/components/Footer";
+import { getPostsByCategory } from "@/lib/api";
 import Link from "next/link";
-import moment from "moment";
 import React from "react";
-import BlogCard from "../components/BlogCard";
+import BlogCard from "src/app/components/BlogCard";
 
-const dateFormatter = (date) => {
-  return moment(date).format("MMMM D, YYYY");
+const formatCatName = (str) => {
+    return str
+    .split('-')           
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1)) 
+    .join(' ');   
 }
 
-const page = () => {
-  const post = getAllPosts();
 
-  
-  
-  // export function getPostsByCategory(category) {
-  //   const allPosts = getAllPosts();
-  //   return allPosts.filter((post) => post.category === category);
-  // }
+const page = ({params}) => {
+  const post = getPostsByCategory(params.slug);
+  if (!post) {
+    return notFound();
+  }
 
   const morePost = post.slice(1);
   return (
@@ -37,14 +36,20 @@ const page = () => {
               <div className="pbmit-breadcrumb">
                 <div className="pbmit-breadcrumb-inner">
                   <span>
-                    <a title="" href="#" className="home">
+                    <Link title="Home" href="/" className="home">
                       <span>MoversCO</span>
-                    </a>
+                    </Link>
                   </span>
                   <span className="sep">-</span>
                   <span>
                     <span className="post-root post post-post current-item">
-                      Blog
+                    Blog
+                    </span>
+                  </span>
+                  <span className="sep">-</span>
+                  <span>
+                    <span className="post-root post post-post current-item">
+                       {formatCatName(params.slug)}
                     </span>
                   </span>
                 </div>
@@ -113,7 +118,7 @@ const page = () => {
         <div className="row">
 
         {post.map((item, index) => (
-           <BlogCard item={item} key={index} />
+            <BlogCard item={item} key={index} />
            ))}
         </div>
     </div>

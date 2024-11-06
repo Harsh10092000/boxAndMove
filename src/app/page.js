@@ -6,8 +6,14 @@ import HeroSlider from "./components/HeroSlider";
 import WhyChooseUsSlider from "./components/WhyChooseUsSlider";
 import ReviewsSlider from "./components/ReviewsSlider";
 import AppointmentForm from "./components/AppointmentForm";
+import { getLatestPosts } from "@/lib/api";
+import Link from "next/link";
+import moment from "moment";
+import { GetMonth, GetDay} from "helperFunctions/DateFun";
+
 
 export default function Home() {
+  const latestPosts = getLatestPosts();
   const slides1 = [
     {
       image: "/revolution/images/slider-04-a.jpg",
@@ -441,18 +447,18 @@ export default function Home() {
                 </div>
                 <div className="col-md-12 col-lg-2">
                   <div className="blog-four-button">
-                    <a
-                      href="blog-grid-view.html"
+                    <Link
+                      href="/blog"
                       className="pbmit-btn pbmit-btn-hover-global"
                     >
                       Learn More
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
             </div>
             <div className="row">
-              {newsSlides.map((post) => (
+              {latestPosts.map((post) => (
                 <div className="col-md-6 col-lg-4" key={post.id}>
                   <article className="pbminfotech-box-blog pbminfotech-blogbox-style-4">
                     <div className="post-item">
@@ -460,7 +466,7 @@ export default function Home() {
                         <div className="pbminfotech-featured-wrapper pbminfotech-post-featured-wrapper pbminfotech-post-format-">
                           <picture>
                             <img
-                              src={post.image}
+                              src={post.coverImage}
                               alt=""
                               className="img-fluid"
                               loading="lazy"
@@ -470,24 +476,28 @@ export default function Home() {
                       </div>
                       <div className="pbminfotech-meta-date-wrapper">
                         <span className="pbminfotech-meta-date">
-                          {post.date}
+                          {/* {moment(post.month).format('DD')}    */}
+                          {GetDay(post.date)}
                         </span>
                         <span className="pbminfotech-meta-month">
-                          {post.month}
+                          
+                          {/* {moment(post.month).format('MMM')}     */}
+                          {GetMonth(post.date)}
                         </span>
                       </div>
                       <div className="pbminfotech-box-content">
                         <span className="pbmit-meta-line cat-links">
-                          <a href={post.link}>{post.category}</a>
+                          <Link href={`/blog/category/${post.catSlug}`}>{post.category}</Link>
                         </span>
                         <div className="pbminfotech-box-title">
                           <h4>
-                            <a href={post.link}>{post.title}</a>
+                            <Link href={`/blog/${post.slug}`}>{post.title}</Link>
                           </h4>
                         </div>
                         <div className="pbmit-blogbox-readmore">
                           <div className="pbminfotech-blogbox-footer-left">
-                            <a href={post.link}>Read More</a>
+                          <Link href={`/blog/${post.slug}`}>Read More</Link>
+                            
                           </div>
                         </div>
                       </div>

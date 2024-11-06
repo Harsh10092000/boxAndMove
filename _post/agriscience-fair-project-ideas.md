@@ -2,10 +2,12 @@
 slug: "agriscience-fair-project-ideas"
 title: "191+ Top Agriscience Fair Project Ideas [Updated 2024]"
 description: " Is homework pointless? We think so! Discover 100 Reasons Why Homework Is Bad in our blog post. Learn how it stresses kids & stifles creativity. Find alternatives!"
+coverImage: "/images/blogImg/2.jpg"
 
 date: "2024-05-08"
 author: Amar
 category: "Residentail moving"
+catSlug: "residentail-moving"
 ---
 Homework is something many people argue about. Some think homework is good because it helps students practice what they learned in class, build good study habits, and learn responsibility. 
 

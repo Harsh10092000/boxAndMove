@@ -98,22 +98,22 @@ const About = () => {
  const aboutUsSlider = [
     {
       title: "Residential Moving",
-      image: "images/about-us-03/service/service-01.jpg",
+      image: "/images/about-us-03/service/service-01.jpg",
       link: "residentialMoving.php"
     },
     {
       title: "Condo & Apartment Moving",
-      image: "images/about-us-03/service/service-02.jpg",
+      image: "/images/about-us-03/service/service-02.jpg",
       link: "CondoApartmentMoving.php"
     },
     {
       title: "Commercial & Office Moving",
-      image: "images/about-us-03/service/service-04.jpg",
+      image: "/images/about-us-03/service/service-04.jpg",
       link: "CommercialOfficeMoving.php"
     },
     {
       title: "Personalized Packing Services",
-      image: "images/about-us-03/service/service-03.jpg",
+      image: "/images/about-us-03/service/service-03.jpg",
       link: "PersonalizedPackingServices.php"
     },
     {
@@ -123,12 +123,12 @@ const About = () => {
     },
     {
       title: "Storage Service",
-      image: "images/about-us-03/service/service-07.jpg",
+      image: "/images/about-us-03/service/service-07.jpg",
       link: "StorageService.php"
     },
     {
       title: "Condo & Apartment Moving",
-      image: "images/about-us-03/service/service-06.jpg",
+      image: "/images/about-us-03/service/service-06.jpg",
       link: "CondoApartmentMoving.php"
     },
     {
@@ -138,7 +138,7 @@ const About = () => {
     },
     {
       title: "Long Distance Moving Service",
-      image: "images/about-us-03/service/service-09.jpg",
+      image: "/images/about-us-03/service/service-09.jpg",
       link: "LongDistanceMoving.php"
     }
   ]
@@ -186,7 +186,7 @@ const About = () => {
 				<div className="row ">
 					<div className="col-md-6">
             <picture>
-						<img src="images/about-us-03/about-us-01.jpg" className="img-fluid" alt="" />
+						<img src="/images/about-us-03/about-us-01.jpg" className="img-fluid" alt="" />
             </picture>
 					</div>
 					<div className="col-md-6">
