@@ -138,6 +138,7 @@ import { DateFormatter, GetDay, GetMonth } from "helperFunctions/DateFun";
 
 
 
+
 export function generateMetadata({ params }) {
   const post = getPostBySlug(params.slug);
   if (!post) {
@@ -156,6 +157,14 @@ export function generateMetadata({ params }) {
 }
 
 const Page = async ({ params }) => {
+
+  const GetCatUrl = (str) => {
+    return str
+    .split(' ')           
+    .map(word => word.charAt(0).toLowerCase() + word.slice(1)) 
+    .join('-');   
+  }
+
   const post = getPostBySlug(params.slug);
 
   const categoryList = getCategoryList();
@@ -284,17 +293,17 @@ const Page = async ({ params }) => {
             </div>
             <div className="col-lg-3 blog-left-col blog-details">
                 <aside className="sidebar">
-                    <aside className="widget widget-search">
+                    {/* <aside className="widget widget-search">
                         <form className="search-form">
                             <input type="search" className="search-field" placeholder="Search …" value=""/>
                             <a href="#"><i className="fa fa-search"></i></a>
                         </form>
-                    </aside>
+                    </aside> */}
                     <aside className="widget widget-categories">
                         <h3 className="widget-title">Categories</h3>
                         <ul>
                           {categoryList.map((item, index) => (
-                             <li key={index}><Link href={`/blog/category/${post.catSlug}`}>{item}</Link>
+                             <li key={index}><Link href={`/blog/category/${GetCatUrl(item)}`}>{item}</Link>
                              {/* <span>2</span> */}
                              </li>
                           ))}
@@ -315,7 +324,7 @@ const Page = async ({ params }) => {
                                 </Link>
                                 <div className="media-body">
                                 <Link href={item.slug}>{item.title}</Link>
-                                <span className="post-date">{DateFormatter({date: post.date})}</span>
+                                <span className="post-date">{DateFormatter({date: item.date})}</span>
                                 </div> 
                             </li>
                           ))}
