@@ -82,7 +82,7 @@ const Footer = () => {
 								<ul>
 										<li><a href="#"><strong>Phone:</strong> <br />+1 (226) 899-2461,<br /> +1 (437) 313-1965</a></li>
 										<li><a href="#"><strong>Address:</strong> <br /> Brampton, ON, Canada, Ontario</a></li>
-										<li><a href="#"><strong>E-mail: </strong> <br />info@boxnmove.ca</a></li>
+										<li><a href="#"><strong>E-mail: </strong> <br />Mavenmovingc@gmail.com</a></li>
 										
 									</ul>
 								</div>
@@ -96,7 +96,7 @@ const Footer = () => {
 					<div className="pbmit-footer-text-inner text-center">
 						<div className="row">
 							<div className="col-md-12">
-								<div className="pbmit-footer-copyright-text-area"> Copyright © 2024 BoxNmove. All rights reserved.
+								<div className="pbmit-footer-copyright-text-area"> Copyright © 2024 MavenMoving. All rights reserved.
 								</div>
 							</div>
 						</div>

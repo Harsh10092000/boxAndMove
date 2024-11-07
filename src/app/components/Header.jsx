@@ -98,7 +98,7 @@ const Header = () => {
                             <ul className="top-contact">
                           
                                 <li><i className="pbmit-base-icon-phone-call"></i>+1 (437) 313-1965</li>
-                                <li><i className="pbmit-base-icon-mail"></i><a href="#"><span className="__cf_email__">info@boxnmove.ca</span></a></li>
+                                <li><i className="pbmit-base-icon-mail"></i><a href="#"><span className="__cf_email__">Mavenmovingc@gmail.com</span></a></li>
                                  {/* <li><i className="pbmit-base-icon-location-pin"></i>
                                  Brampton, ON, Canada, Ontario</li>  */}
                             </ul>
@@ -115,7 +115,9 @@ const Header = () => {
                                     <div className="site-branding">
                                         <span className="site-title">
                                             <Link href="/">
-                                                <Image className="logo-img" src="/images/logo.png" width={100} height={100} alt="" />
+                                            <picture>
+                                                <img className="logo-img" src="/images/logo.png" alt="" />
+                                                </picture>
                                             </Link>
                                         </span>
                                     </div>

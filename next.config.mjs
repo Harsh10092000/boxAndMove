@@ -1,7 +1,26 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+    env: {
+        webURL: "http://localhost:3000",
+      },
+};
 
 export default nextConfig;
+
+
+
+
+
+
+
+
+// /** @type {import('next').NextConfig} */
+// const nextConfig = {};
+
+// export default nextConfig;
+
+
+
 
 // import createMDX from '@next/mdx'
  
