@@ -6,7 +6,7 @@ import path from 'path';
 export async function POST(req) {
   try {
     const { content, slug } = await req.json();
-    const filePath = path.join(process.cwd(), `_POST/${slug}.md`);
+    const filePath = path.join(process.cwd(), `_post/${slug}.md`);
     fs.writeFileSync(filePath, content);
 
     console.log('File created successfully:', filePath);
@@ -21,7 +21,7 @@ export async function POST(req) {
 export async function PUT(req) {
   try {
     const { content, slug } = await req.json();
-    const filePath = path.join(process.cwd(), `_POST/${slug}.md`);
+    const filePath = path.join(process.cwd(), `_post/${slug}.md`);
     fs.writeFileSync(filePath, content);
 
     console.log('File created successfully:', filePath);
@@ -41,7 +41,7 @@ export async function DELETE(req) {
     if (!slug) {
       return new Response(JSON.stringify({ message: 'Slug is required' }), { status: 400 });
     }
-    const filePath = path.join(process.cwd(), '_POST', `${slug}.md`);
+    const filePath = path.join(process.cwd(), '_post', `${slug}.md`);
     const updatedPath = path.join(process.cwd(), '_recyclebin', `${slug}.md`);
     
     if (!fs.existsSync(filePath)) {
