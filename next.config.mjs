@@ -2,7 +2,8 @@
 const nextConfig = {
     env: {
         //webURL: "http://localhost:3000",
-        webURL: "https://box-and-move.vercel.app/",
+        //webURL: "https://box-and-move.vercel.app/",
+        webURL: "https://matlabassignmenthelp.com/",
       },
 
 };
