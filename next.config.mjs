@@ -1,8 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     env: {
-        webURL: "http://localhost:3000",
+        //webURL: "http://localhost:3000",
+        webURL: "https://box-and-move.vercel.app/",
       },
+
 };
 
 export default nextConfig;
