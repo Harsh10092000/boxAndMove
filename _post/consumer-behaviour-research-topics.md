@@ -1,15 +1,13 @@
 ---
-slug: "consumer-behaviour-research-topics"
+slug: consumer-behaviour-research-topics
 title: "Top 83+ Insightful Consumer Behaviour Research Topics for Students"
 description: " Is homework pointless? We think so! Discover 100 Reasons Why Homework Is Bad in our blog post. Learn how it stresses kids & stifles creativity. Find alternatives!"
 coverImage: "/images/blogImg/1.jpg"
-
 date: "2024-05-08"
 author: Amar
 category: "Storage Service"
 catSlug: "storage-service"
 ---
-
 As high school students, you have a special chance to make a real difference in your community and unlock your full abilities by doing community service. Whether you want to build up your resume, explore new interests, or just help others, there are so many community service project ideas waiting for you to discover.
 
 In this complete guide, we've gathered over 111 inspiring and helpful community service ideas to empower you to become leaders who make positive changes. From protecting the environment to helping older people, tutoring kids without much money, to organizing big fundraisers - the choices are endless.

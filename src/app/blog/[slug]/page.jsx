@@ -139,8 +139,9 @@ import { DateFormatter, GetDay, GetMonth } from "helperFunctions/DateFun";
 
 
 
-export function generateMetadata({ params }) {
-  const post = getPostBySlug(params.slug);
+export async function generateMetadata({ params }) {
+  const {slug} = await params;
+  const post = getPostBySlug(slug);
   if (!post) {
     return notFound();
   }
@@ -158,6 +159,7 @@ export function generateMetadata({ params }) {
 
 const Page = async ({ params }) => {
 
+  const {slug} = await params;
   const GetCatUrl = (str) => {
     return str
     .split(' ')           
@@ -165,10 +167,10 @@ const Page = async ({ params }) => {
     .join('-');   
   }
 
-  const post = getPostBySlug(params.slug);
+  const post = getPostBySlug(slug);
 
   const categoryList = getCategoryList();
-  const recentPosts =  getRecentPosts(params.slug);
+  const recentPosts =  getRecentPosts(slug);
 
 
   const content = await markdownToHtml(post.content || "");
