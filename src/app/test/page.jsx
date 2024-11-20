@@ -221,7 +221,7 @@ const Page = async ({ searchParams }) => {
                    
                     <div class="flex pt-2  text-sm text-gray-500">
                       <Link
-                        href={`/experts/${
+                        href={`/test/${
                           item.Name.toLowerCase().replaceAll(" ", "-") +
                           "-" +
                           item.id
