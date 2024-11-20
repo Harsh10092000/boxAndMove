@@ -127,7 +127,7 @@ const getPosts = unstable_cache(
  
 export default async function Page() {
   const allPosts = await getPosts()
- 
+ console.log("allPosts : " , allPosts);
   return (
     <ul>
       {allPosts.map((post) => (

@@ -88,12 +88,11 @@ import React from 'react';
 
 export async function generateStaticParams() {
   const posts = await fetch('https://api.vercel.app/blog').then((res) => res.json());
-  
-  // Return the correct structure: each object should contain a `params` key
   return posts.map((post) => ({
-    params: { slug: post.slug }, // `params` is required
+    params: { slug: post.title },
   }));
 }
+
 
 const Page = ({ params }) => {
   const { slug } = params; // Access slug from params
