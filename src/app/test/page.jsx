@@ -113,7 +113,7 @@
 
 
 import { unstable_cache } from 'next/cache'
-
+import Link from 'next/link'
  
 const getPosts = unstable_cache(
   async () => {
@@ -131,7 +131,7 @@ export default async function Page() {
   return (
     <ul>
       {allPosts.map((post) => (
-        <li key={post.id}>{post.title}</li>
+        <li key={post.id}><Link href={`/test/${post.title}`}>{post.title}</Link> </li>
       ))}
     </ul>
   )
