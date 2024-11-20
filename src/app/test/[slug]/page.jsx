@@ -65,6 +65,15 @@
 
 import React from 'react'
 
+
+export async function generateStaticParams() {
+  const posts = await fetch('https://api.vercel.app/blog').then((res) => res.json())
+ 
+  return posts.map((post) => ({
+    slug: post.slug,
+  }))
+}
+
 const page = ({ params }) => {
   const { slug } = params;
   return (
