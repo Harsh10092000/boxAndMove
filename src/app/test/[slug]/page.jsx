@@ -61,26 +61,50 @@
 // export default PropertyDetail;
 
 
+// import React from 'react'
+
+// export async function generateStaticParams() {
+//   const posts = await fetch('https://api.vercel.app/blog').then((res) => res.json())
+//   return posts.map((post) => ({
+//     slug: post.slug,
+//   }))
+// }
+
+// const page = ({ params }) => {
+//   const { slug } = params;
+//   return (
+//     <div>
+//       {slug}
+//     </div>
+//   )
+// }
+
+// export default page
 
 
-import React from 'react'
+// app/blog/[slug]/page.js
 
+import React from 'react';
 
 export async function generateStaticParams() {
-  const posts = await fetch('https://api.vercel.app/blog').then((res) => res.json())
- 
+  const posts = await fetch('https://api.vercel.app/blog').then((res) => res.json());
+  
+  // Return the correct structure: each object should contain a `params` key
   return posts.map((post) => ({
-    slug: post.slug,
-  }))
+    params: { slug: post.slug }, // `params` is required
+  }));
 }
 
-const page = ({ params }) => {
-  const { slug } = params;
+const Page = ({ params }) => {
+  const { slug } = params; // Access slug from params
+  
   return (
     <div>
-      {slug}
-    </div>
-  )
-}
+      <h1>Blog Post: {slug}</h1>
 
-export default page
+    </div>
+  );
+};
+
+export default Page;
+
