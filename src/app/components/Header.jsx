@@ -143,7 +143,7 @@ const Header = () => {
                                                     </li>
                                                     <li><Link href="/about">About us</Link></li>
                                                     <li><Link href="/blog">Blog</Link></li>
-                                                    <li><Link href="/test">Test</Link></li>
+                                                    {/* <li><Link href="/test">Test</Link></li> */}
                                                     {/* <li><Link href="/admin/allblogs">All Blogs</Link></li> */}
                                                     
                                                     <li className="dropdown">
