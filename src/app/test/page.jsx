@@ -145,21 +145,22 @@ import Footer from "../components/Footer";
 import React from "react";
 import pool from "../libs/mysql";
 import Link from "next/link";
-
+import { getExperts } from "@/lib/api";
 
 const getData = async (currentPage) => {
-  try {
-    const db = await pool;
-    const query =
-      "SELECT * from experts LEFT JOIN expert_subjects ON experts.SubjectID = expert_subjects.sid WHERE experts.id > ? limit 12";
-    const q = "SELECT COUNT(*) as total from experts";
+  //try {
+    // const db = await pool;
+    // const query =
+    //   "SELECT * from experts LEFT JOIN expert_subjects ON experts.SubjectID = expert_subjects.sid WHERE experts.id > ? limit 12";
+    // const q = "SELECT COUNT(*) as total from experts";
 
-    const [rows] = await db.query(query, (currentPage - 1) * 12);
-    const [total] = await db.query(q);
-    return { data: rows, total: total };
-  } catch (error) {
-    return error;
-  }
+    // const [rows] = await db.query(query, (currentPage - 1) * 12);
+    // const [total] = await db.query(q);
+    // return { data: rows, total: total };
+  // } catch (error) {
+  //   return error;
+  // }
+  return await getExperts(currentPage);
 };
 
 const Page = async ({ searchParams }) => {

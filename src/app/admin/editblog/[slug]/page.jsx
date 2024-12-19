@@ -97,10 +97,7 @@ catSlug: "${blogDetails.catSlug}"
         slug: blogDetails.slug,
       });
       console.log(response.data.message);
-      //redirect(`/blog/${blogDetails.slug}`);
       router.push(`/blog/${blogDetails.slug}`);
-
-
     } catch (error) {
       console.error(
         "Error saving blog:",
