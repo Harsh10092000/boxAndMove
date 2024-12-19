@@ -312,7 +312,81 @@ import Footer from "src/app/components/Footer";
 import { DateFormatter, GetDay, GetMonth } from "helperFunctions/DateFun";
 //import markdownToHtml from "@/lib/markdowntohtml";
 import { fetchGraphCategories, fetchGraphRecentPosts, fetchSinglePost } from "@/lib/graphapi";
-import Head from "next/head";
+
+
+
+export async function generateMetadata({ params }, parent) {
+  // Fetch the post data using the slug from params
+  const res = await fetchSinglePost(params.slug);
+
+  // Function to generate JSON-LD for product
+  function addProductJsonLd(post) {
+    return {
+      __html: JSON.stringify({
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": post.title,
+        "image": [
+          "https://example.com/photos/1x1/photo.jpg",
+          "https://example.com/photos/4x3/photo.jpg",
+          "https://example.com/photos/16x9/photo.jpg"
+        ],
+        "description": "Sleeker than ACME's Classic Anvil, the Executive Anvil is perfect for the business traveler looking for something to drop from a height.",
+        "sku": "0446310786",
+        "mpn": "925872",
+        "brand": {
+          "@type": "Brand",
+          "name": "ACME"
+        },
+        "review": {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "4",
+            "bestRating": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Fred Benson"
+          }
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.4",
+          "reviewCount": "89"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": `https://box-and-move.vercel.app/blog/${post.slug}`, // Use a full URL
+          "priceCurrency": "USD",
+          "price": "119.99",
+          "priceValidUntil": "2020-11-20",
+          "itemCondition": "https://schema.org/UsedCondition",
+          "availability": "https://schema.org/InStock"
+        }
+      }),
+    };
+  }
+
+  // Return metadata for the page
+  return {
+    title: res.title,
+    description: res.excerpt || "Default description for the page.", // Fallback description if excerpt is not available
+    openGraph: {
+      title: res.title,
+      description: res.excerpt || "Description for the Open Graph",
+      images: [res.featuredImage ? res.featuredImage.sourceUrl : '/default-image.jpg'], // Full URL to image
+    },
+    jsonLd: {
+      __html: addProductJsonLd(res).__html,
+    },
+  };
+}
+
+ 
+
+
+
 const getData = async (params) => {
     try {
       const res = await fetchSinglePost(params.slug);
@@ -331,117 +405,15 @@ const getData = async (params) => {
   
 
 const PostPage = async ({ params }) => {
-    //const {slug} = await params;
     const post = await getData(params);
     const catList = await fetchGraphCategories();
     const recentPosts = await fetchGraphRecentPosts();
-    console.log("recentPosts : " , recentPosts);
-    //console.log(post.content)
-    //const content = await markdownToHtml(post.content || "");
-  // return (
-  //   <div>
-  //     <h1>{post.title}</h1>
-  //     <div
-  //       dangerouslySetInnerHTML={{
-  //         __html: post.excerpt,
-  //       }}
-  //     />
-  //     {/* <p>{post.excerpt}</p> */}
-  //     content
-  //     <div
-  //       dangerouslySetInnerHTML={{
-  //         __html: post.content,
-  //       }}
-  //     />
-    
-  //     {post.featuredImage?.node && (
-  //       <img src={post.featuredImage.node.sourceUrl} alt={post.title} />
-  //     )}
-  //     {/* <div>
-  //       {post.categories.edges.map(({ node }) => (
-  //         <span key={node.slug}>{node.name}</span>
-  //       ))}
-  //     </div> */}
-  //   </div>
-  // );
 
-
-  function addProductJsonLd() {
-    return {
-      __html: `{
-      "@context": "https://schema.org/",
-      "@type": "Product",
-      "name": ${post.title},
-      "image": [
-        "https://example.com/photos/1x1/photo.jpg",
-        "https://example.com/photos/4x3/photo.jpg",
-        "https://example.com/photos/16x9/photo.jpg"
-       ],
-      "description": "Sleeker than ACME's Classic Anvil, the Executive Anvil is perfect for the business traveler looking for something to drop from a height.",
-      "sku": "0446310786",
-      "mpn": "925872",
-      "brand": {
-        "@type": "Brand",
-        "name": "ACME"
-      },
-      "review": {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "4",
-          "bestRating": "5"
-        },
-        "author": {
-          "@type": "Person",
-          "name": "Fred Benson"
-        }
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.4",
-        "reviewCount": "89"
-      },
-      "offers": {
-        "@type": "Offer",
-        "url": ${post.slug},
-        "priceCurrency": "USD",
-        "price": "119.99",
-        "priceValidUntil": "2020-11-20",
-        "itemCondition": "https://schema.org/UsedCondition",
-        "availability": "https://schema.org/InStock"
-      }
-    }
-  `,
-    }
-  }
+ 
 
     return (
     <>
-     <Head>
-        <title>{post.title}</title>
-        <meta
-          name="description"
-          content="Super product with free shipping."
-          key="desc"
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={addProductJsonLd()}
-          key="product-jsonld"
-        />
-<meta
-          property="og:title"
-          content={post.title}
-        />
-<meta
-          property="og:description"
-          content="And a social description for our cool page"
-        />
-        <meta
-          property="og:image"
-          content={post.slug}
-        />
-      </Head>
+    
       <Header />
 
       <div className="pbmit-title-bar-wrapper">
